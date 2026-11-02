@@ -1,11 +1,11 @@
 # Rubylode Opal for Redmine
 
-A calm, light-first theme: milky surfaces, a soft blue-teal with a faint opal shimmer, and clear status colours.
+A light theme for Redmine 7 and up: white panels on an off-white page, a blue-teal primary colour, and coloured status and priority chips.
 
-A theme for Redmine 7 and up. It is plain CSS plus one small script (`javascripts/theme.js`, about 45 lines), with no plugin,
-no build step and no change to Redmine itself. The script only reads the page: it puts a status dot beside the group name in an
-issue list grouped by status, and gives the top bar a soft shadow once the page scrolls. Without it the theme still works. Light
-first, with a designed dark set that follows your system setting (see [Dark mode](#dark-mode)).
+It is plain CSS plus one small script (`javascripts/theme.js`, about 45 lines), with no plugin, no build step and no change to
+Redmine itself. The script only reads the page: it puts a status dot beside the group name in an issue list grouped by status,
+and gives the top bar a shadow once the page scrolls. Without it the theme still works. The dark set follows your system setting
+(see [Dark mode](#dark-mode)).
 
 ![A walk through Rubylode Opal: the project, the issue list, an issue and the new issue form](docs/demo/walkthrough-light.gif)
 
@@ -41,23 +41,21 @@ The screenshots come from the demo Redmine in this repository; the people, proje
 - [Development](#development)
 - [Checks and releases](#checks-and-releases)
 - [License](#license)
-- [Disclaimer](#disclaimer)
 
 ## What it looks like
 
-- **A compact two-row header.** The top bar carries a pale wash from teal through lilac to peach, the Opal mark, the global
-  links, the search and the project switcher as rounded fields, and your avatar. Below it, a white bar with the project name,
-  the project tabs (the current one underlined in the same shimmer) and the "+" menu.
-- **A prominent New issue button** beside the search, when the Rubylode New issue button plugin is installed.
-- **Tidy tables.** Every list is a white card with a header band, a hairline under each row, softer column lines, faint stripes
-  and a pale teal hover with a coloured edge.
-- **Status and priority at a glance.** Status is a chip with a dot (New blue, In Progress teal, Resolved green, Feedback amber,
-  Closed grey, Rejected red); priority is a chip with a five-bar meter, amber for High, red for Urgent, solid red for Immediate.
-- **Readable issue pages.** A card with an edge in the status colour, a large subject, labelled parent strips, a segmented
-  previous / next control, an attribute panel with a slim % Done bar, framed subtasks and related issues, and a card per note
-  in the history.
-- **Card panels** for the sidebar, the filters, My page, the project overview, the projects list, activity days and roadmap
-  versions; tinted action buttons, with the main action in the primary gradient.
+- A two-row header. The top bar has a teal-to-lilac-to-peach wash, the Opal mark, the global links, the search and project
+  switcher as rounded fields, and your avatar. Below it, a white bar holds the project name, the project tabs (the current one
+  underlined in the same wash) and the "+" menu.
+- A New issue button beside the search, when the Rubylode New issue button plugin is installed.
+- Lists are white cards with a header band, a hairline under each row, light column lines, faint stripes and a pale teal hover
+  with a coloured edge.
+- Status is a chip with a dot (New blue, In Progress teal, Resolved green, Feedback amber, Closed grey, Rejected red). Priority is
+  a chip with a five-bar meter: amber for High, red for Urgent, solid red for Immediate.
+- An issue is a card with an edge in the status colour, a large subject, labelled parent strips, a segmented previous / next
+  control, an attribute panel with a slim % Done bar, framed subtasks and related issues, and a card per note in the history.
+- The sidebar, the filters, My page, the project overview, the projects list, activity days and roadmap versions are cards.
+  Buttons are tinted, and the main action uses the primary gradient.
 
 ## Install
 
@@ -72,11 +70,11 @@ The theme folder holds the stylesheets, `javascripts/theme.js`, the mark (`image
 
 ## What is covered
 
-Every page the page check loads is designed, in light and dark, at desktop and phone width: sign in, the home page, the project
+The page check loads these pages, in light and dark, at desktop and phone width: sign in, the home page, the project
 overview (Redmine's own and the Rubylode Projects plugin's), the projects list, the issue list (plain and grouped), activity, the
 roadmap, an issue, an issue with subtasks, a child issue, the edit and new issue forms, the to-do page, My page (Redmine's own and
 the Rubylode Home plugin's), a wiki page and its editor, spent time, Gantt, the calendar, project settings and administration.
-Flash messages, tabs, the right-click menu, dropdowns, pagination, the text editor and the phone slide-out menu are styled too.
+Flash messages, tabs, the right-click menu, dropdowns, pagination, the text editor and the phone slide-out menu are styled as well.
 
 ## Rubylode plugins
 
@@ -85,14 +83,14 @@ theme, `opal/stylesheets/opal-plugins.css`, points them at Opal's tokens, so the
 
 - Projects (`--rubylode-projects-*`): the overview cards and the projects list.
 - Home (`--rubylode-home-*`): My page.
-- To-do (`--todo-*`): the quiet colours of the to-do page.
+- To-do (`--todo-*`): the to-do page.
 - Uptime Kuma (`--rubylode-uptime-kuma-*`), GlitchTip (`--rubylode-glitchtip-*`), Windmill (`--rubylode-windmill-*`) and Beszel
-  (`--rubylode-beszel-*`): the status blocks share one look.
+  (`--rubylode-beszel-*`): the status blocks.
 - Stats (`--stats-tooltip-*`): the chart tooltip.
-- New issue button: dressed as a rounded primary button beside the search. Plugins load their stylesheets after the theme's, so
+- New issue button: a rounded primary button beside the search. Plugins load their stylesheets after the theme's, so
   these rules start with `body #header` to win whatever the order.
 
-None of them is needed. Without a plugin its section simply never matches.
+None of them is needed. Without a plugin its rules match nothing.
 
 ## Customising
 
@@ -119,8 +117,8 @@ The labels "Parent" and "Ancestor" above an issue's subject are drawn by CSS, so
 
 ## Dark mode
 
-Dark mode follows your system setting (`prefers-color-scheme`), as in the other Rubylode themes, and is part of the design: a deep
-slate page, slightly lighter panels, a lifted teal, and the header wash in deep teal, plum and rose. Code blocks stay light, since
+Dark mode follows your system setting (`prefers-color-scheme`): a deep slate page, slightly lighter panels, a lighter teal, and
+the header wash in deep teal, plum and rose. Code blocks stay light, since
 Redmine's syntax colours are made for a light background. To keep Opal light-only, remove the line `@import url(opal-dark.css);`
 from `opal/stylesheets/responsive.css`; every dark value is in that one file.
 
@@ -170,11 +168,6 @@ A tag such as `v1.0.0` runs the same check, builds `opal-<version>.zip` holding 
 
 ## License
 
-GPL version 2 or later, the same as Redmine. See `LICENSE`. Copyright (C) 2026  Nick Gorbikoff. Opal's Open Color remap and list look
-are derived from Rubylode Sapphire, under the same licence.
+GPL version 2 or later, the same as Redmine. See `LICENSE`. Copyright (C) 2026  Nick Gorbikoff.
 
-## Disclaimer
-
-Use at your own risk. This software is provided as is, without warranty of any kind, express or implied. The author is not
-liable for any damage, data loss or downtime that comes from using it. Try it on a copy of your tracker before you use it on the
-real one.
+No warranty, as the GPL says. Try it on a copy of your tracker before the real one.

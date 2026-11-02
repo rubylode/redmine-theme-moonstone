@@ -25,7 +25,7 @@
  *                        opal-dark.css      the dark values, from the system setting
  *
  * Loading the page blocks after the phone rules means a rule of Opal's wins over Redmine's at the same specificity, at every
- * width. Derived from Rubylode Sapphire 1.0.0 (the Open Color remap and the list look), under the same licence. */
+ * width. */
 
 @import url(/application.css);
 @import url(opal-tokens.css);
