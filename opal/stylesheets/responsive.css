@@ -1,4 +1,4 @@
-/* Opal, a theme for Redmine 7: the phone rules and the Opal layers
+/* Opal, a theme for Redmine 7: the phone rules and the theme's layers
  * Copyright (C) 2026  Nick Gorbikoff
  *
  * This program is free software; you can redistribute it and/or
@@ -16,9 +16,9 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. */
 
 /* Redmine links "responsive" after "application" and "dropdown" and takes the theme's file of that name when there is one.
- * This one keeps Redmine's phone rules, then loads the Opal layers after them. See application.css for the map. */
+ * This one keeps Redmine's phone rules, then loads the theme's layers after them. See application.css for the map. */
 
 @import url(/responsive.css);
-@import url(opal.css);
-@import url(opal-plugins.css);
-@import url(opal-dark.css);
+@import url(structure.css);
+@import url(plugins.css);
+@import url(dark.css);

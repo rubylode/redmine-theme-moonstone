@@ -18,14 +18,18 @@
 /* Redmine loads a theme's application.css in place of its own, and its responsive.css in place of Redmine's phone rules.
  * Opal keeps both of Redmine's files and adds its own after them:
  *
- *   application.css    Redmine's stylesheet, then opal-tokens.css (every colour, radius and font, light values)
+ *   application.css    Redmine's stylesheet, then tokens.css (every colour, corner, font and size, and Redmine's own
+ *                      palette pointed at them)
  *   responsive.css     Redmine's phone rules, then
- *                        opal.css           the page blocks: header, lists, the issue page, forms, everything else
- *                        opal-plugins.css   the Rubylode plugins' custom properties pointed at the tokens
- *                        opal-dark.css      the dark values, from the system setting
+ *                        structure.css     the page blocks: header, lists, the issue page, forms, everything else
+ *                        plugins.css       the Rubylode plugins' custom properties pointed at the tokens
+ *                        dark.css          the dark values, from the system setting
  *
- * Loading the page blocks after the phone rules means a rule of Opal's wins over Redmine's at the same specificity, at every
- * width. */
+ * Loading the page blocks after the phone rules means a rule of the theme wins over Redmine's at the same specificity, at
+ * every width.
+ *
+ * These stylesheets and javascripts/theme.js are generated from the shared base of the Rubylode themes: a change made here
+ * is overwritten by the next build. */
 
 @import url(/application.css);
-@import url(opal-tokens.css);
+@import url(tokens.css);

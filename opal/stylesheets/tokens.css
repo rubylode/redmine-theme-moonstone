@@ -1,0 +1,203 @@
+/* Opal, a theme for Redmine 7
+ * Copyright (C) 2026  Nick Gorbikoff
+ * GNU General Public License, version 2 or later. See the LICENSE file.
+ * Generated from the shared base of the Rubylode themes: a change made here is overwritten by the next build. */
+
+/* Opal's tokens, light values. The dark values of the same names are in dark.css. */
+:root {
+  /* Surfaces: a milky, cool off-white page with white panels on it. */
+  --theme-page: #f4f6f8;
+  --theme-surface: #ffffff;
+  --theme-surface-sunken: #f3f6f8;      /* attribute panels, journal headers, table stripes */
+  --theme-surface-hover: #e2f0f2;       /* hovered rows and menu items: a pale blue-teal */
+  --theme-line: #e3e8ec;                /* row lines and panel borders */
+  --theme-line-soft: #e9edf1;           /* column lines, quiet chips */
+  --theme-line-strong: #7f8c99;         /* field borders: 3:1 against the page and the panels, as controls need */
+
+  /* Text. All three reach WCAG AA on every surface above. */
+  --theme-ink: #1c2833;
+  --theme-ink-soft: #2f4150;
+  --theme-ink-muted: #56636f;
+  --theme-ink-on-colour: #ffffff;       /* text on a strong colour: priority Immediate, a delete button on hover */
+  --theme-ink-on-light-colour: #13202b; /* text on a light avatar colour */
+
+  /* The accent: a soft blue-teal ramp, light to dark. Step 6 is the button colour, step 7 the link colour. */
+  --theme-accent-0: #eef7f8;
+  --theme-accent-1: #d9eef1;
+  --theme-accent-2: #a9d6dd;
+  --theme-accent-3: #6fb8c4;
+  --theme-accent-4: #3f9aaa;
+  --theme-accent-5: #24808f;
+  --theme-accent-6: #1b6b80;
+  --theme-accent-7: #16657a;
+  --theme-accent-8: #11505f;
+  --theme-accent-9: #0b3540;
+  --theme-accent-1-rgb: 217, 238, 241;
+
+  /* The opal shimmer: a faint lilac and peach, used sparingly (the header, focus rings, the primary button). */
+  --theme-secondary: #b9a7e0;
+  --theme-secondary-pale: #efeafa;
+  --theme-tertiary: #f2b89c;
+  --theme-tertiary-pale: #fcefe7;
+  --theme-accent-pale: #e6f2f4;
+
+  --theme-link: var(--theme-accent-7);
+  --theme-link-hover: var(--theme-accent-8);
+  --theme-primary: var(--theme-accent-6);
+  --theme-primary-hover: #14566a;
+  --theme-ink-on-primary: #ffffff;
+  --theme-primary-background: linear-gradient(135deg, #1b6b80 0%, #2f6489 60%, #4b5d97 100%);
+  --theme-primary-background-hover: linear-gradient(135deg, #14566a 0%, #24506f 60%, #3b4a7c 100%);
+  --theme-redmine-accent: var(--theme-accent-6); /* Redmine's own --oc-blue-7 */
+  --theme-redmine-accent-rgb: 27, 107, 128;
+  --theme-selected-tab-border-image: linear-gradient(90deg, var(--theme-accent-4), var(--theme-secondary), var(--theme-tertiary)) 1;
+
+  /* The header: a pale wash from teal through lilac to peach, dark ink on it. */
+  --theme-header-background: linear-gradient(115deg, var(--theme-accent-pale) 0%, var(--theme-secondary-pale) 58%, var(--theme-tertiary-pale) 100%);
+  --theme-header-background-solid: #eaf2f5; /* the phone header and the slide-out menu paint with one colour */
+  --theme-header-ink: var(--theme-ink);
+  --theme-header-link: var(--theme-ink-soft);
+  --theme-header-hover-background: rgba(27, 107, 128, 0.09);
+  --theme-header-line: rgba(27, 107, 128, 0.16);
+  --theme-header-field-background: rgba(255, 255, 255, 0.72);
+  --theme-header-field-border: #75828f;
+  --theme-mark-image: url("../images/opal-mark.svg");
+
+  /* Buttons that are not the primary: a tint of the primary. Delete buttons: a tint of red. */
+  --theme-button-background: #e3f0f2;
+  --theme-button-border: #a9d6dd;
+  --theme-button-ink: #11505f;
+  --theme-danger-soft: #fbe9ea;
+  --theme-danger-soft-border: #efb9bd;
+  --theme-danger-ink: #9c2f37;
+
+  /* Focus: a teal outline with a lilac halo. */
+  --theme-focus: var(--theme-accent-5);
+  --theme-focus-halo: rgba(185, 167, 224, 0.45);
+
+  /* Meaning. Status ids in a default Redmine: 1 New, 2 In Progress, 3 Resolved, 4 Feedback, 5 Closed, 6 Rejected. */
+  --theme-status-new: #2a6fa8;
+  --theme-status-in-progress: #1b8291;
+  --theme-status-resolved: #2f8a4e;
+  --theme-status-feedback: #c98a12;
+  --theme-status-closed: #6b7785;
+  --theme-status-rejected: #c8414b;
+  --theme-success: #2f8a4e;
+  --theme-warning: #c98a12;
+  --theme-danger: #c8414b;
+  --theme-danger-strong: #a8323b;       /* white text on it reaches AA */
+  --theme-success-ink: #1d5a33;
+  --theme-success-soft: #e3f2e8;
+  --theme-caution-ink: #7a4f05;
+  --theme-caution-soft: #fbf2e1;
+  --theme-chip-ink-mix: #000000;        /* a chip's text is its colour mixed with this: darker in light, lighter in dark */
+  --theme-chip-ink-share: 60%;
+  --theme-chip-fill-share: 14%;
+
+  /* Messages, avatars, activity markers, search highlights, diffs and the Gantt chart. */
+  --theme-flash-success-background: #e7f4ec;
+  --theme-flash-success-border: #a9d3b7;
+  --theme-flash-success-ink: #1d5a33;
+  --theme-flash-warning-background: #fbf2e1;
+  --theme-flash-warning-border: #eccf95;
+  --theme-flash-warning-ink: #6f4d0b;
+  --theme-avatar-color-0: #b02a2a;      /* Redmine's red, orange and pink avatars, darkened to reach 4.5:1 with white */
+  --theme-avatar-color-1: #a14b0a;
+  --theme-avatar-color-7: #b0214f;
+  --theme-activity-edit-ink: #4b3f78;
+  --theme-activity-wiki-ink: #7a3f22;
+  --theme-search-highlight-ink: var(--theme-ink);
+  --theme-diff-removed: #fde7e9;
+  --theme-diff-added: #e1f3e6;
+  --theme-gantt-late: #e7a26b;
+  --theme-gantt-late-label: #8a4a12;
+
+  /* Shape and depth. */
+  --theme-radius-highlight: 3px;
+  --theme-radius-inline: 4px;
+  --theme-radius-small: 6px;
+  --theme-radius: 10px;
+  --theme-radius-panel: 12px;
+  --theme-radius-pill: 999px;
+  --theme-radius-round: 50%;
+  --theme-border-width: 1px;
+  --theme-border-style: solid;
+  --theme-shadow-card: 0 1px 2px rgba(28, 40, 51, 0.06), 0 2px 8px rgba(28, 40, 51, 0.04);
+  --theme-shadow-popup: 0 10px 28px rgba(28, 40, 51, 0.16), 0 0 1px rgba(28, 40, 51, 0.3);
+  --theme-shadow-primary-button: 0 1px 2px rgba(27, 107, 128, 0.25);
+  --theme-shadow-header-scrolled: 0 2px 10px rgba(28, 40, 51, 0.08);
+  --theme-space-small: 8px;
+  --theme-space: 16px;
+  --theme-space-large: 24px;
+  --theme-density: 1;                   /* a multiplier for the height of table rows, list items and header strips */
+  --theme-top-bar-height: 48px;
+  --theme-project-bar-height: 50px;
+
+  /* Type: the system's own fonts, as the other Rubylode themes use. No font files are shipped. */
+  --theme-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --theme-font-monospace: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  --theme-title-font: var(--theme-font);
+  --theme-title-weight: 700;
+  --theme-code-background: #f1f4f7;
+  --theme-code-ink: #1c2833;
+  --theme-syntax-keyword: #006b00;
+
+  /* Icons drawn in a stylesheet carry their colour inside the image. */
+  --theme-select-arrow-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2356636f' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  --theme-search-field-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2356636f' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-3.5-3.5'/%3E%3C/svg%3E");
+  --theme-project-jump-arrow-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2356636f' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+
+  /* Redmine's grey ramp (--oc-gray-0 to -9) and its white. */
+  --theme-redmine-white: #ffffff;
+  --theme-neutral-0: #f6f8fa;
+  --theme-neutral-1: #eff3f6;
+  --theme-neutral-2: #e6ebef;
+  --theme-neutral-3: #d9e0e6;
+  --theme-neutral-4: #bfc9d2;
+  --theme-neutral-5: #5f6d79;
+  --theme-neutral-6: #56636f;
+  --theme-neutral-7: #46525e;
+  --theme-neutral-8: #2f4150;
+  --theme-neutral-9: #13202b; /* the to-do page mixes this at 62 percent for its counts, so it needs to be this dark to reach AA */
+  --theme-neutral-9-rgb: 19, 32, 43;
+}
+
+/* Redmine's palette, pointed at the tokens. Redmine 7 colours itself with the Open Color variables (--oc-*) and a few
+ * --color-* names, so remapping them recolours the parts of Redmine the theme does not style by hand. */
+:root {
+  --fonts-main: var(--theme-font);
+
+  --oc-white: var(--theme-redmine-white);
+  --oc-gray-0: var(--theme-neutral-0);
+  --oc-gray-1: var(--theme-neutral-1);
+  --oc-gray-2: var(--theme-neutral-2);
+  --oc-gray-3: var(--theme-neutral-3);
+  --oc-gray-4: var(--theme-neutral-4);
+  --oc-gray-5: var(--theme-neutral-5);
+  --oc-gray-6: var(--theme-neutral-6);
+  --oc-gray-7: var(--theme-neutral-7);
+  --oc-gray-8: var(--theme-neutral-8);
+  --oc-gray-9: var(--theme-neutral-9);
+  --oc-gray-9-rgb: var(--theme-neutral-9-rgb);
+
+  --oc-blue-0: var(--theme-accent-0);
+  --oc-blue-1: var(--theme-accent-1);
+  --oc-blue-2: var(--theme-accent-2);
+  --oc-blue-3: var(--theme-accent-3);
+  --oc-blue-4: var(--theme-accent-4);
+  --oc-blue-5: var(--theme-accent-5);
+  --oc-blue-6: var(--theme-accent-6);
+  --oc-blue-7: var(--theme-redmine-accent);
+  --oc-blue-8: var(--theme-accent-7);
+  --oc-blue-9: var(--theme-link); /* Redmine colours its links with step 9 */
+  --oc-blue-1-rgb: var(--theme-accent-1-rgb);
+  --oc-blue-7-rgb: var(--theme-redmine-accent-rgb);
+  --oc-indigo-0: var(--theme-accent-0);
+  --oc-indigo-1: var(--theme-accent-1);
+  --oc-indigo-2: var(--theme-accent-2);
+  --oc-indigo-5: var(--theme-accent-5);
+  --oc-indigo-9: var(--theme-accent-9);
+
+  --color-top-menu-background: var(--theme-header-background-solid);
+  --color-header-background: var(--theme-header-background-solid);
+}
