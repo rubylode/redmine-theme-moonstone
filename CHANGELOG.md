@@ -2,6 +2,24 @@
 
 All notable changes to this theme. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.1.0] - 2026-11-02
+
+### Changed
+
+- The base text size is 16px, up from 14px. It is the token `--theme-font-size`.
+- List text is 14px, up from 11.4px. The sidebar is 14px, up from 12.3px. Fields and buttons are 15px, up from 13.3px.
+- Labels, chips, headings, the header and the action buttons grew in the same proportion.
+- `--theme-font` starts with Noto Sans and `--theme-font-monospace` with Noto Sans Mono, before the system fonts.
+- Chips in the issue list, the action buttons and the label column of the issue page grow with the text.
+- In a tight issue list, a date and its time stack on two lines, and cells have 10px of padding at each side, down from 12px.
+- The right-hand sidebar is 216px wide, down from 232px, so the issue list fits beside it at 1280px.
+- From 900px to 1179px the project switcher is 176px wide and the search field 100px, so the switcher's text fits.
+
+### Added
+
+- The theme ships Noto Sans for text and Noto Sans Mono for code, as woff2 files in `opal/fonts/`, so nothing is loaded from another site.
+- The font files are under the SIL Open Font License 1.1, and the licence texts are in `opal/fonts/`.
+
 ## [1.0.1] - 2026-11-02
 
 ### Fixed
