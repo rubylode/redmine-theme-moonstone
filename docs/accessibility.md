@@ -5,9 +5,9 @@ identify it (field borders) and for focus indicators.
 
 ## How it is measured
 
-- The page check (`npm run check`) loads 24 pages in light and dark, at 1280px and 390px wide, and measures every visible
+- The page check (`npm run check`) loads 29 pages in light and dark, at 1280px and 390px wide, and measures every visible
   piece of text against the colour stacked behind it. On 2026-11-02 against Redmine 7.0.2 with the Rubylode plugins mounted it
-  measured about 2,800 text pairs per run at desktop width and 3,000 at phone width, and found none below AA: 96 of 96 gated
+  measured about 2,900 text pairs per run at desktop width and 3,200 at phone width, and found none below AA: 116 of 116 gated
   runs clean.
 - The tokens, one pair at a time, below. The check skips text over a gradient or an image, so the header and the primary
   buttons are measured here, at each end of their gradient, and so are field borders and focus rings, which are not text.

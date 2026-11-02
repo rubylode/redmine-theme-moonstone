@@ -72,14 +72,16 @@ The theme folder holds the stylesheets, `javascripts/theme.js`, the mark (`image
 
 The page check loads these pages, in light and dark, at desktop and phone width: sign in, the home page, the project
 overview (Redmine's own and the Rubylode Projects plugin's), the projects list, the issue list (plain and grouped), activity, the
-roadmap, an issue, an issue with subtasks, a child issue, the edit and new issue forms, the to-do page, My page (Redmine's own and
-the Rubylode Home plugin's), a wiki page and its editor, spent time, Gantt, the calendar, project settings and administration.
+roadmap, an issue, an issue with subtasks, a child issue, the edit and new issue forms, the to-do page, the Stats page, the pages
+of the four status plugins, My page (Redmine's own and the Rubylode Home plugin's), a wiki page and its editor, spent time, Gantt,
+the calendar, project settings and administration.
 Flash messages, tabs, the right-click menu, dropdowns, pagination, the text editor and the phone slide-out menu are styled as well.
 
+<!-- rubylode-plugins:start -->
 ## Rubylode plugins
 
 Opal styles the Rubylode plugins' blocks natively. Each plugin draws with its own CSS custom properties, and one section of the
-theme, `opal/stylesheets/opal-plugins.css`, points them at Opal's tokens, so the blocks follow the theme in light and dark:
+theme, `opal/stylesheets/plugins.css`, points them at Opal's tokens, so the blocks follow the theme in light and dark:
 
 - [Rubylode Projects](https://github.com/rubylode/redmine-rubylode-projects) (`--rubylode-projects-*`): the overview cards and the projects list.
 - [Rubylode Home](https://github.com/rubylode/redmine-rubylode-home) (`--rubylode-home-*`): My page and the welcome page.
@@ -93,27 +95,33 @@ theme, `opal/stylesheets/opal-plugins.css`, points them at Opal's tokens, so the
   Plugins load their stylesheets after the theme's, so these rules start with `body #header` to win whatever the order.
 
 None of them is needed. Without a plugin its rules match nothing.
+<!-- rubylode-plugins:end -->
 
 ## Customising
 
-Every colour, radius, shadow and font is a custom property in `opal/stylesheets/opal-tokens.css` (light values) and
-`opal/stylesheets/opal-dark.css` (dark values). Change them there, or override them from a stylesheet of your own:
+Every colour, corner, shadow, font and a few sizes are custom properties in `opal/stylesheets/tokens.css` (light values) and
+`opal/stylesheets/dark.css` (dark values). Change them there, or override them from a stylesheet of your own. The names
+start with `--theme-` and are the same in every Rubylode theme. The main ones:
 
 | Token | What it is |
 |---|---|
-| `--opal-page`, `--opal-surface`, `--opal-surface-sunken`, `--opal-surface-hover` | the page, the panels, sunken panels and stripes, hovered rows |
-| `--opal-line`, `--opal-line-soft`, `--opal-line-strong` | panel borders and row lines, column lines, field borders |
-| `--opal-ink`, `--opal-ink-soft`, `--opal-muted` | text, secondary text, labels and notes |
-| `--opal-teal-0` to `--opal-teal-9` | the primary ramp; `--opal-link`, `--opal-primary` and Redmine's blue ramp point into it |
-| `--opal-lilac`, `--opal-peach` and their `-pale` twins | the shimmer, used in the header, the focus halo and the primary gradient |
-| `--opal-primary-gradient`, `--opal-header-gradient` | the primary button and the top bar |
-| `--opal-status-new`, `-progress`, `-resolved`, `-feedback`, `-closed`, `-rejected` | status colours, by Redmine's default status ids 1 to 6 |
-| `--opal-success`, `--opal-warning`, `--opal-danger`, `--opal-danger-strong` | meaning colours (priority High, Urgent, Immediate) |
-| `--opal-radius-small`, `--opal-radius`, `--opal-radius-panel` | corners of fields, cards and panels |
-| `--opal-font`, `--opal-font-mono` | the text and code font stacks |
+| `--theme-page`, `--theme-surface`, `--theme-surface-sunken`, `--theme-surface-hover` | the page, the panels, sunken panels and stripes, hovered rows |
+| `--theme-line`, `--theme-line-soft`, `--theme-line-strong` | panel borders and row lines, column lines, field borders |
+| `--theme-ink`, `--theme-ink-soft`, `--theme-ink-muted` | text, secondary text, labels and notes |
+| `--theme-accent-0` to `--theme-accent-9` | the teal ramp; `--theme-link`, `--theme-primary` and Redmine's blue ramp point into it |
+| `--theme-secondary`, `--theme-tertiary` and their `-pale` twins | the lilac and peach shimmer, used in the header, the focus halo and the tab underline |
+| `--theme-primary-background`, `--theme-header-background` | the primary button and the top bar (gradients in Opal) |
+| `--theme-status-new`, `-in-progress`, `-resolved`, `-feedback`, `-closed`, `-rejected` | status colours, by Redmine's default status ids 1 to 6 |
+| `--theme-success`, `--theme-warning`, `--theme-danger`, `--theme-danger-strong` | meaning colours (priority High, Urgent, Immediate) |
+| `--theme-radius-small`, `--theme-radius`, `--theme-radius-panel`, `--theme-radius-pill` | corners of fields, cards, panels and pills |
+| `--theme-border-width`, `--theme-border-style`, `--theme-density` | panel borders, and the height of table rows and list items |
+| `--theme-font`, `--theme-font-monospace`, `--theme-title-font`, `--theme-title-weight` | the text, code and heading fonts |
+
+The rest (messages, avatars, diffs, the Gantt chart, the header heights, the icons drawn in the stylesheet) are listed with a
+comment each in `tokens.css`.
 
 Status and priority colours are matched by Redmine's default ids (statuses 1 New to 6 Rejected, priorities 1 Low to 5
-Immediate). If yours differ, change the ids in the "issue list" and "issue page" sections of `opal/stylesheets/opal.css`.
+Immediate). If yours differ, change the ids in the "issue list" and "issue page" sections of `opal/stylesheets/structure.css`.
 
 The labels "Parent" and "Ancestor" above an issue's subject are drawn by CSS, so they are in English only.
 
@@ -121,7 +129,7 @@ The labels "Parent" and "Ancestor" above an issue's subject are drawn by CSS, so
 
 Dark mode follows your system setting (`prefers-color-scheme`): a deep slate page, slightly lighter panels, a lighter teal, and
 the header wash in deep teal, plum and rose. Code blocks stay light, since
-Redmine's syntax colours are made for a light background. To keep Opal light-only, remove the line `@import url(opal-dark.css);`
+Redmine's syntax colours are made for a light background. To keep Opal light-only, remove the line `@import url(dark.css);`
 from `opal/stylesheets/responsive.css`; every dark value is in that one file.
 
 ## Accessibility
@@ -153,10 +161,13 @@ npm run record          # docs/demo, a GIF of a walk through the pages
 ruby bin/demo reset     # wipe the demo
 ```
 
-If copies of the Rubylode plugins sit next to this repository (`../redmine-rubylode-todo`, `../redmine-rubylode-new-issue-button`,
-`../redmine-rubylode-projects`, `../redmine-rubylode-home`, or another folder named in `RUBYLODE_PLUGINS_DIR`), the demo mounts them
-and the check, screenshots and recording show their pages. Without them the demo is plain Redmine, and the check skips the to-do
-page.
+If copies of the Rubylode plugins listed above sit next to this repository (`../redmine-rubylode-todo` and so on, or in a folder
+named in `RUBYLODE_PLUGINS_DIR`), the demo mounts them and the check, screenshots and recording show their pages. The demo points
+the status plugins at an address where nothing answers, so their pages show the "unavailable" state. Without the plugins the
+demo is plain Redmine, and the check skips their pages.
+
+The stylesheets, `javascripts/theme.js`, `test/`, `bin/demo` and `docker-compose.yml` are generated from the base all Rubylode
+themes share, so a fix there reaches every theme. If you send a change to one of them, I will carry it over to the base.
 
 The check fails on console errors, failed requests, sideways scrolling and text below WCAG AA contrast. `REDMINE_TAG=7.0 ruby bin/demo up`
 runs it against another Redmine version. After you change a stylesheet, run `ruby bin/demo restart` and reload: Redmine caches theme
