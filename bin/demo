@@ -10,18 +10,33 @@
 #   ruby bin/demo reset     stop it and wipe the data
 #
 # REDMINE_TAG picks the Redmine version (7.0.2 or 7.0); the default is 7.0.2.
-# The Rubylode to-do plugin is mounted too when a copy is found, so its page shows in the screenshots and the recording.
-# It is looked for in ../redmine-rubylode-todo, or in TODO_PLUGIN_PATH. Without it the demo is the same, minus that page.
+# The Rubylode plugins the theme dresses are mounted too when a copy is found next to this repository (or in
+# RUBYLODE_PLUGINS_DIR): the to-do list, the New issue button, Projects and Home. Each one is optional; without them the demo is
+# plain Redmine, and the check skips the pages that need them.
 require "json"
 require "net/http"
 
 ROOT = File.expand_path("..", __dir__)
 CONFIG = JSON.parse(File.read(File.join(ROOT, "test", "config.json")))
 READY_SECONDS = 240
-PLUGIN_PATH = File.expand_path(ENV.fetch("TODO_PLUGIN_PATH", "../redmine-rubylode-todo"), ROOT)
+PLUGINS_DIR = File.expand_path(ENV.fetch("RUBYLODE_PLUGINS_DIR", ".."), ROOT)
+# The checkout folder of each plugin, and the folder name Redmine needs (the plugin id).
+PLUGINS = {
+  "redmine-rubylode-todo" => "redmine_rubylode_todo",
+  "redmine-rubylode-new-issue-button" => "redmine_rubylode_new_issue_button",
+  "redmine-rubylode-projects" => "redmine_rubylode_projects",
+  "redmine-rubylode-home" => "redmine_rubylode_home"
+}.freeze
 OVERRIDE_FILE = File.join(ROOT, "docker-compose.override.yml")
 
-def plugin_available? = File.exist?(File.join(PLUGIN_PATH, "init.rb"))
+def available_plugins
+  PLUGINS.filter_map do |checkout, id|
+    path = File.join(PLUGINS_DIR, checkout)
+    [path, id] if File.exist?(File.join(path, "init.rb"))
+  end
+end
+
+def plugin_available? = available_plugins.any?
 
 def compose(*arguments)
   system("docker", "compose", *arguments, chdir: ROOT) || abort("docker compose #{arguments.join(' ')} failed")
@@ -32,18 +47,20 @@ def runner(code_or_path)
   compose("exec", "-T", "redmine", "bin/rails", "runner", code_or_path)
 end
 
-# Mounts the to-do plugin through a compose override (git-ignored), or removes the override when there is no plugin.
+# Mounts the plugins that were found through a compose override (git-ignored), or removes the override when there are none.
 def write_override
   return File.delete(OVERRIDE_FILE) if !plugin_available? && File.exist?(OVERRIDE_FILE)
   return unless plugin_available?
 
+  volumes = available_plugins.map { |path, id| "      - #{path}:/usr/src/redmine/plugins/#{id}:ro" }
   File.write(OVERRIDE_FILE, <<~YAML)
-    # Written by bin/demo. Mounts the Rubylode to-do plugin so its page appears in the demo.
+    # Written by bin/demo. Mounts the Rubylode plugins that were found, so their pages appear in the demo.
     services:
       redmine:
         volumes:
-          - #{PLUGIN_PATH}:/usr/src/redmine/plugins/redmine_rubylode_todo:ro
+    #{volumes.join("\n")}
   YAML
+  puts "Plugins: #{available_plugins.map(&:last).join(', ')}"
 end
 
 def wait_until_ready
