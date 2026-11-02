@@ -1,0 +1,143 @@
+/* Opal, a theme for Redmine 7
+ * Copyright (C) 2026  Nick Gorbikoff
+ * GNU General Public License, version 2 or later. See the LICENSE file.
+ *
+ * The design tokens, light values. Every colour, radius and shadow the theme draws with is named here, so this is the one
+ * file to change to recolour Opal. The dark values of the same names are in opal-dark.css.
+ *
+ * The second block maps Redmine 7's own palette (the Open Color variables, --oc-*, and a few --color-* names) onto these
+ * tokens, which recolours the parts of Redmine the theme does not style by hand. */
+
+:root {
+  /* Surfaces: a milky, cool off-white page with white panels on it. */
+  --opal-page: #f4f6f8;
+  --opal-surface: #ffffff;
+  --opal-surface-sunken: #f3f6f8;      /* attribute panels, journal headers, table stripes */
+  --opal-surface-hover: #e2f0f2;       /* hovered rows and menu items: a pale blue-teal */
+  --opal-line: #e3e8ec;                /* row lines and panel borders */
+  --opal-line-soft: #e9edf1;           /* column lines, quiet chips */
+  --opal-line-strong: #c9d2da;         /* field borders */
+
+  /* Text. All three reach WCAG AA on every surface above. */
+  --opal-ink: #1c2833;
+  --opal-ink-soft: #2f4150;
+  --opal-muted: #56636f;
+
+  /* The primary: a soft blue-teal ramp, light to dark. Step 6 is the button colour, step 7 the link colour. */
+  --opal-teal-0: #eef7f8;
+  --opal-teal-1: #d9eef1;
+  --opal-teal-2: #a9d6dd;
+  --opal-teal-3: #6fb8c4;
+  --opal-teal-4: #3f9aaa;
+  --opal-teal-5: #24808f;
+  --opal-teal-6: #1b6b80;
+  --opal-teal-7: #16657a;
+  --opal-teal-8: #11505f;
+  --opal-teal-9: #0b3540;
+
+  /* The opal shimmer: a faint lilac and peach, used sparingly (the header, focus rings, the primary button). */
+  --opal-lilac: #b9a7e0;
+  --opal-lilac-pale: #efeafa;
+  --opal-peach: #f2b89c;
+  --opal-peach-pale: #fcefe7;
+  --opal-teal-pale: #e6f2f4;
+
+  --opal-link: var(--opal-teal-7);
+  --opal-link-hover: var(--opal-teal-8);
+  --opal-primary: var(--opal-teal-6);
+  --opal-primary-hover: #14566a;
+  --opal-on-primary: #ffffff;
+  --opal-primary-gradient: linear-gradient(135deg, #1b6b80 0%, #2f6489 60%, #4b5d97 100%);
+  --opal-primary-gradient-hover: linear-gradient(135deg, #14566a 0%, #24506f 60%, #3b4a7c 100%);
+
+  /* The header: a pale wash from teal through lilac to peach, dark ink on it. */
+  --opal-header-gradient: linear-gradient(115deg, var(--opal-teal-pale) 0%, var(--opal-lilac-pale) 58%, var(--opal-peach-pale) 100%);
+  --opal-header-solid: #eaf2f5;        /* the phone header and the slide-out menu paint with one colour */
+  --opal-header-ink: var(--opal-ink);
+  --opal-header-link: var(--opal-ink-soft);
+  --opal-header-hover: rgba(27, 107, 128, 0.09);
+  --opal-header-line: rgba(27, 107, 128, 0.16);
+  --opal-header-field: rgba(255, 255, 255, 0.72);
+  --opal-header-field-border: #b7c6cf;
+
+  /* Buttons that are not the primary: a tint of the primary. Delete buttons: a tint of red. */
+  --opal-button-tint: #e3f0f2;
+  --opal-button-tint-border: #a9d6dd;
+  --opal-button-tint-text: #11505f;
+  --opal-danger-tint: #fbe9ea;
+  --opal-danger-tint-border: #efb9bd;
+  --opal-danger-tint-text: #9c2f37;
+
+  /* Focus: a teal outline with a lilac halo. */
+  --opal-focus: var(--opal-teal-4);
+  --opal-focus-halo: rgba(185, 167, 224, 0.45);
+
+  /* Meaning. Status ids in a default Redmine: 1 New, 2 In Progress, 3 Resolved, 4 Feedback, 5 Closed, 6 Rejected. */
+  --opal-status-new: #2a6fa8;
+  --opal-status-progress: #1b8291;
+  --opal-status-resolved: #2f8a4e;
+  --opal-status-feedback: #c98a12;
+  --opal-status-closed: #6b7785;
+  --opal-status-rejected: #c8414b;
+  --opal-success: #2f8a4e;
+  --opal-warning: #c98a12;
+  --opal-danger: #c8414b;
+  --opal-danger-strong: #a8323b;       /* white text on it reaches AA */
+  --opal-chip-ink-mix: #000000;        /* a chip's text is its colour mixed with this: darker in light, lighter in dark */
+  --opal-chip-ink-share: 60%;
+  --opal-chip-fill-share: 14%;
+
+  /* Shape and depth. */
+  --opal-radius-small: 6px;
+  --opal-radius: 10px;
+  --opal-radius-panel: 12px;
+  --opal-shadow-card: 0 1px 2px rgba(28, 40, 51, 0.06), 0 2px 8px rgba(28, 40, 51, 0.04);
+  --opal-shadow-pop: 0 10px 28px rgba(28, 40, 51, 0.16), 0 0 1px rgba(28, 40, 51, 0.3);
+  --opal-space-small: 8px;
+  --opal-space: 16px;
+  --opal-space-large: 24px;
+
+  /* Type: the system's own fonts, as the other Rubylode themes use. No font files are shipped. */
+  --opal-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --opal-font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  --opal-code-background: #f1f4f7;
+  --opal-code-ink: #1c2833;
+}
+
+/* Redmine's palette, pointed at the tokens. */
+:root {
+  --fonts-main: var(--opal-font);
+
+  --oc-gray-0: #f6f8fa;
+  --oc-gray-1: #eff3f6;
+  --oc-gray-2: #e6ebef;
+  --oc-gray-3: #d9e0e6;
+  --oc-gray-4: #bfc9d2;
+  --oc-gray-5: #5f6d79;
+  --oc-gray-6: #56636f;
+  --oc-gray-7: #46525e;
+  --oc-gray-8: #2f4150;
+  --oc-gray-9: #13202b; /* the to-do page mixes this at 62 percent for its counts, so it needs to be this dark to reach AA */
+  --oc-gray-9-rgb: 19, 32, 43;
+
+  --oc-blue-0: var(--opal-teal-0);
+  --oc-blue-1: var(--opal-teal-1);
+  --oc-blue-2: var(--opal-teal-2);
+  --oc-blue-3: var(--opal-teal-3);
+  --oc-blue-4: var(--opal-teal-4);
+  --oc-blue-5: var(--opal-teal-5);
+  --oc-blue-6: var(--opal-teal-6);
+  --oc-blue-7: var(--opal-teal-6);
+  --oc-blue-8: var(--opal-teal-7);
+  --oc-blue-9: var(--opal-teal-7); /* Redmine colours its links with step 9 */
+  --oc-blue-1-rgb: 217, 238, 241;
+  --oc-blue-7-rgb: 27, 107, 128;
+  --oc-indigo-0: var(--opal-teal-0);
+  --oc-indigo-1: var(--opal-teal-1);
+  --oc-indigo-2: var(--opal-teal-2);
+  --oc-indigo-5: var(--opal-teal-5);
+  --oc-indigo-9: var(--opal-teal-9);
+
+  --color-top-menu-background: var(--opal-header-solid);
+  --color-header-background: var(--opal-header-solid);
+}

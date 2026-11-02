@@ -15,28 +15,17 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. */
 
+/* Redmine loads a theme's application.css in place of its own, and its responsive.css in place of Redmine's phone rules.
+ * Opal keeps both of Redmine's files and adds its own after them:
+ *
+ *   application.css    Redmine's stylesheet, then opal-tokens.css (every colour, radius and font, light values)
+ *   responsive.css     Redmine's phone rules, then
+ *                        opal.css           the page blocks: header, lists, the issue page, forms, everything else
+ *                        opal-plugins.css   the Rubylode plugins' custom properties pointed at the tokens
+ *                        opal-dark.css      the dark values, from the system setting
+ *
+ * Loading the page blocks after the phone rules means a rule of Opal's wins over Redmine's at the same specificity, at every
+ * width. Derived from Rubylode Sapphire 1.0.0 (the Open Color remap and the list look), under the same licence. */
+
 @import url(/application.css);
-
-/* 1. Light tokens.
- * Redmine 7 takes its colours from the Open Color palette (--oc-gray-0 to -9, and the same ramps for each hue, each with an
- * -rgb twin) plus a few --color-* names. Remapping those variables recolours most of the application. */
-:root {
-}
-
-/* 2. Dark tokens: see the one block at the end of this file. */
-
-/* 3. Layout shell: header, menus, sidebar. */
-
-/* 4. Issues: the list, the issue page, history. */
-
-/* 5. Forms, buttons, flash messages, context menu, login. */
-
-/* 6. Everything else follows from the tokens. Fix only what is clearly broken. */
-
-/* 7. Dark, from the system setting. Supported, but not recommended: Opal is designed in light and looks weaker in dark.
- * Every dark rule is in this one block; delete it to keep the theme light-only. */
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-  }
-}
+@import url(opal-tokens.css);
