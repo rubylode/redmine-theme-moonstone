@@ -1,0 +1,79 @@
+# Opal for Redmine
+
+A calm, light-first theme: milky surfaces, a soft blue-teal with a faint opal shimmer, and clear status colours.
+
+A theme for Redmine 7 and up. It is CSS only, with no script, no plugin and no change to Redmine itself. Made for light mode;
+a dark set is included but not recommended (see [Dark mode](#dark-mode)).
+
+<!-- Screenshots and the recording go here once the theme is built:
+![The issue list](docs/screenshots/issues-light.png)
+![A walk through the theme](docs/demo/walkthrough-light.gif) -->
+
+## Contents
+
+- [Install](#install)
+- [What is covered](#what-is-covered)
+- [Dark mode](#dark-mode)
+- [Compatibility](#compatibility)
+- [Development](#development)
+- [Checks and releases](#checks-and-releases)
+- [License](#license)
+- [Disclaimer](#disclaimer)
+
+## Install
+
+1. Download the zip attached to the latest release (the Releases page of this repository) and unzip it inside the `themes` folder of your Redmine, so that `themes/opal/stylesheets/application.css` exists. Or copy the `opal` folder from the source tree.
+2. Restart Redmine.
+3. In Administration, Settings, Display, choose **Opal** as the theme and save.
+
+To go back, choose another theme on the same page. Nothing is written to the database apart from that setting.
+
+## What is covered
+
+The header and menus, the sidebar, the issue list, the issue page with its history, the new and edit forms, buttons, flash
+messages, tables, tabs, the context menu and the login page, in light and dark. Other pages (Gantt, calendar, wiki, administration)
+take their colours from the same variables and are fixed up as problems turn up.
+
+## Dark mode
+
+Dark mode is supported and follows your system setting, but it is not recommended. Opal is designed in light, and it does not look as good in dark. If you would rather the theme stayed light, delete the `@media (prefers-color-scheme: dark)` block at the end of `opal/stylesheets/application.css`; every dark rule is in that one block.
+
+## Compatibility
+
+Redmine 7.0 and newer. Tested on 7.0.2 and the 7.0 line. Older versions are not expected to work.
+
+## Development
+
+You need Docker, Ruby, Node and Chrome.
+
+```
+npm install
+ruby bin/demo up        # a throwaway Redmine with demo data at http://localhost:3110 (admin / admin)
+npm run check           # loads every page in light and dark, at desktop and phone width
+npm run screenshots     # docs/screenshots
+npm run record          # docs/demo, a GIF of a walk through the pages
+ruby bin/demo reset     # wipe the demo
+```
+
+If a copy of the Rubylode to-do plugin sits next to this repository (`../redmine-rubylode-todo`, or set `TODO_PLUGIN_PATH`), the demo mounts it and
+the check, screenshots and recording include its page. Without it they skip that page.
+
+The check fails on console errors, failed requests, sideways scrolling and text below WCAG AA contrast. `REDMINE_TAG=7.0 ruby bin/demo up`
+runs it against another Redmine version. After you change the stylesheet, run `ruby bin/demo restart` and reload: Redmine caches theme
+files until it restarts.
+
+## Checks and releases
+
+Every push starts a real Redmine from its Docker image (7.0.2 and the 7.0 line), loads every page of the theme in light and dark at desktop and phone width, and fails on console errors, failed requests, sideways scrolling and low text contrast. On GitHub that is `.github/workflows/check.yml`, on GitHub's own runners, and it also runs on pull requests. On a self-hosted Gitea it is `.gitea/workflows/check.yml`, which runs only on pushes to `main`, because that runner works on the host with Docker access and must only run code that is already merged.
+
+A tag such as `v1.0.0` runs the same check, builds `<name>-<version>.zip` holding the theme folder, and attaches it to a release with the matching section of `CHANGELOG.md` as its notes (`release.yml` in the same folders). The tag needs a section for that version in the changelog.
+
+## License
+
+GPL version 2 or later, the same as Redmine. See `LICENSE`. Copyright (C) 2026  Nick Gorbikoff.
+
+## Disclaimer
+
+Use at your own risk. This software is provided as is, without warranty of any kind, express or implied. The author is not
+liable for any damage, data loss or downtime that comes from using it. Try it on a copy of your tracker before you use it on the
+real one.
