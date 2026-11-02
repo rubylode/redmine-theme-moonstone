@@ -2,6 +2,13 @@
 
 All notable changes to this theme. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.0.1] - 2026-11-02
+
+### Fixed
+
+- Overdue due dates in issue lists keep enough contrast on striped and hovered rows.
+- On a phone, the administration links no longer show through the slide-out menu.
+
 ## [1.0.0] - 2026-11-02
 
 ### Added
