@@ -239,7 +239,7 @@ nav.top-menu { background: var(--opal-header-solid); color: var(--opal-header-li
   #header #project-jump.expanded .drdn-trigger { background-image: none; }
   #project-jump .drdn-content { inset-block-start: 100%; margin-block-start: 6px; border-radius: var(--opal-radius); box-shadow: var(--opal-shadow-pop); }
 }
-/* Below 1180px the bar gets tight: narrower fields, and Help leaves the bar (it is also linked in the footer). */
+/* Below 1180px the bar gets tight: narrower fields, and Help leaves the bar (it stays in the phone menu and on wider windows). */
 @media screen and (min-width: 900px) and (max-width: 1179px) {
   nav#top-menu.top-menu { --opal-search-width: 270px; }
   #header #quick-search input[type=text] { inline-size: 130px; }
