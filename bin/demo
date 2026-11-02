@@ -11,8 +11,9 @@
 #
 # REDMINE_TAG picks the Redmine version (7.0.2 or 7.0); the default is 7.0.2.
 # The Rubylode plugins the theme dresses are mounted too when a copy is found next to this repository (or in
-# RUBYLODE_PLUGINS_DIR): the to-do list, the New issue button, Projects and Home. Each one is optional; without them the demo is
-# plain Redmine, and the check skips the pages that need them.
+# RUBYLODE_PLUGINS_DIR):
+# Projects, Home, To-do, Uptime Kuma, GlitchTip, Windmill, Beszel, Stats and New issue button.
+# Each one is optional; without them the demo is plain Redmine, and the check skips the pages that need them.
 require "json"
 require "net/http"
 
@@ -20,19 +21,24 @@ ROOT = File.expand_path("..", __dir__)
 CONFIG = JSON.parse(File.read(File.join(ROOT, "test", "config.json")))
 READY_SECONDS = 240
 PLUGINS_DIR = File.expand_path(ENV.fetch("RUBYLODE_PLUGINS_DIR", ".."), ROOT)
-# The checkout folder of each plugin, and the folder name Redmine needs (the plugin id).
+# The folder name Redmine needs for each plugin (the plugin id), and the checkout folders it may be found in, first match wins.
 PLUGINS = {
-  "redmine-rubylode-todo" => "redmine_rubylode_todo",
-  "redmine-rubylode-new-issue-button" => "redmine_rubylode_new_issue_button",
-  "redmine-rubylode-projects" => "redmine_rubylode_projects",
-  "redmine-rubylode-home" => "redmine_rubylode_home"
+  "redmine_rubylode_projects" => ["redmine-rubylode-projects"],
+  "redmine_rubylode_home" => ["redmine-rubylode-home"],
+  "redmine_rubylode_todo" => ["redmine-rubylode-todo"],
+  "redmine_rubylode_uptime_kuma" => ["redmine-rubylode-uptime-kuma"],
+  "redmine_rubylode_glitchtip" => ["redmine-rubylode-glitchtip"],
+  "redmine_rubylode_windmill" => ["redmine-rubylode-windmill"],
+  "redmine_rubylode_beszel" => ["redmine-rubylode-beszel"],
+  "redmine_rubylode_stats" => ["redmine-rubylode-stats", "redmine-rubylode-stats-public"],
+  "redmine_rubylode_new_issue_button" => ["redmine-rubylode-new-issue-button"]
 }.freeze
 OVERRIDE_FILE = File.join(ROOT, "docker-compose.override.yml")
 
 def available_plugins
-  PLUGINS.filter_map do |checkout, id|
-    path = File.join(PLUGINS_DIR, checkout)
-    [path, id] if File.exist?(File.join(path, "init.rb"))
+  PLUGINS.filter_map do |id, checkouts|
+    path = checkouts.map { |checkout| File.join(PLUGINS_DIR, checkout) }.find { |folder| File.exist?(File.join(folder, "init.rb")) }
+    [path, id] if path
   end
 end
 
