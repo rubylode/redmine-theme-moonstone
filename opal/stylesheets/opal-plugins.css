@@ -209,5 +209,5 @@ body .rubylode-beszel {
   body:has(#header a.rubylode-new-issue-button) nav#top-menu.top-menu { --opal-search-width: 530px; }
 }
 @media screen and (min-width: 900px) and (max-width: 1179px) {
-  body:has(#header a.rubylode-new-issue-button) nav#top-menu.top-menu { --opal-search-width: 430px; }
+  body:has(#header a.rubylode-new-issue-button) nav#top-menu.top-menu { --opal-search-width: 400px; }
 }

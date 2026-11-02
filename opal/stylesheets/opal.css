@@ -112,7 +112,11 @@ nav.top-menu { background: var(--opal-header-solid); color: var(--opal-header-li
     font-weight: 500;
     white-space: nowrap;
   }
-  nav#top-menu .profile-menu { flex: none; justify-content: flex-end; inline-size: 64px; margin-inline-start: auto; }
+  /* The account takes a fixed width, so the lifted search group knows where to stop: the avatar when signed in, Sign in and
+     Register when not */
+  nav#top-menu .profile-menu { flex: none; justify-content: flex-end; inline-size: var(--opal-account-width); margin-inline-start: auto; }
+  body { --opal-account-width: 64px; }
+  body:has(.profile-menu a.login) { --opal-account-width: 170px; }
   /* The account: Redmine draws the person's avatar or initials; a ring in the primary colour marks it. */
   #account .dropdown-trigger { padding: 4px 6px; border-radius: 999px; }
   #account .dropdown-trigger .avatar, #account .dropdown-trigger img.gravatar { box-shadow: 0 0 0 2px var(--opal-surface), 0 0 0 3.5px var(--opal-teal-3); }
@@ -189,7 +193,7 @@ nav.top-menu { background: var(--opal-header-solid); color: var(--opal-header-li
   #header #quick-search {
     position: absolute;
     inset-block-start: -48px;
-    inset-inline-end: calc(24px + 64px + 12px);
+    inset-inline-end: calc(24px + var(--opal-account-width) + 12px);
     z-index: 2;
     display: flex;
     align-items: center;
@@ -237,9 +241,9 @@ nav.top-menu { background: var(--opal-header-solid); color: var(--opal-header-li
 }
 /* Below 1180px the bar gets tight: narrower fields, and Help leaves the bar (it is also linked in the footer). */
 @media screen and (min-width: 900px) and (max-width: 1179px) {
-  nav#top-menu.top-menu { --opal-search-width: 300px; }
-  #header #quick-search input[type=text] { inline-size: 150px; }
-  #header #quick-search #project-jump.drdn { inline-size: 140px; }
+  nav#top-menu.top-menu { --opal-search-width: 270px; }
+  #header #quick-search input[type=text] { inline-size: 130px; }
+  #header #quick-search #project-jump.drdn { inline-size: 130px; }
   .top-menu__links a.help { display: none; }
   .top-menu__links a, .top-menu__links a:link, .top-menu__links a:visited { padding-inline: 7px; }
 }
