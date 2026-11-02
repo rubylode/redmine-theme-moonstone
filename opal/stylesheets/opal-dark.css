@@ -18,7 +18,7 @@
     --opal-surface-hover: #1d3138;
     --opal-line: #2a353e;
     --opal-line-soft: #26313a;
-    --opal-line-strong: #4a5964;
+    --opal-line-strong: #6b7a86;
 
     --opal-ink: #e2e8ed;
     --opal-ink-soft: #c9d3db;
@@ -45,7 +45,7 @@
     --opal-header-hover: rgba(108, 196, 209, 0.12);
     --opal-header-line: rgba(108, 196, 209, 0.16);
     --opal-header-field: rgba(17, 23, 28, 0.6);
-    --opal-header-field-border: #3b4a55;
+    --opal-header-field-border: #6b7a86;
 
     --opal-button-tint: #18323a;
     --opal-button-tint-border: #2f5d68;

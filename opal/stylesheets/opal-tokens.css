@@ -16,7 +16,7 @@
   --opal-surface-hover: #e2f0f2;       /* hovered rows and menu items: a pale blue-teal */
   --opal-line: #e3e8ec;                /* row lines and panel borders */
   --opal-line-soft: #e9edf1;           /* column lines, quiet chips */
-  --opal-line-strong: #c9d2da;         /* field borders */
+  --opal-line-strong: #7f8c99;         /* field borders: 3:1 against the page and the panels, as controls need */
 
   /* Text. All three reach WCAG AA on every surface above. */
   --opal-ink: #1c2833;
@@ -58,7 +58,7 @@
   --opal-header-hover: rgba(27, 107, 128, 0.09);
   --opal-header-line: rgba(27, 107, 128, 0.16);
   --opal-header-field: rgba(255, 255, 255, 0.72);
-  --opal-header-field-border: #b7c6cf;
+  --opal-header-field-border: #75828f;
 
   /* Buttons that are not the primary: a tint of the primary. Delete buttons: a tint of red. */
   --opal-button-tint: #e3f0f2;
@@ -69,7 +69,7 @@
   --opal-danger-tint-text: #9c2f37;
 
   /* Focus: a teal outline with a lilac halo. */
-  --opal-focus: var(--opal-teal-4);
+  --opal-focus: var(--opal-teal-5);
   --opal-focus-halo: rgba(185, 167, 224, 0.45);
 
   /* Meaning. Status ids in a default Redmine: 1 New, 2 In Progress, 3 Resolved, 4 Feedback, 5 Closed, 6 Rejected. */
