@@ -81,14 +81,16 @@ Flash messages, tabs, the right-click menu, dropdowns, pagination, the text edit
 Opal styles the Rubylode plugins' blocks natively. Each plugin draws with its own CSS custom properties, and one section of the
 theme, `opal/stylesheets/opal-plugins.css`, points them at Opal's tokens, so the blocks follow the theme in light and dark:
 
-- Projects (`--rubylode-projects-*`): the overview cards and the projects list.
-- Home (`--rubylode-home-*`): My page.
-- To-do (`--todo-*`): the to-do page.
-- Uptime Kuma (`--rubylode-uptime-kuma-*`), GlitchTip (`--rubylode-glitchtip-*`), Windmill (`--rubylode-windmill-*`) and Beszel
-  (`--rubylode-beszel-*`): the status blocks.
-- Stats (`--stats-tooltip-*`): the chart tooltip.
-- New issue button: a rounded primary button beside the search. Plugins load their stylesheets after the theme's, so
-  these rules start with `body #header` to win whatever the order.
+- [Rubylode Projects](https://github.com/rubylode/redmine-rubylode-projects) (`--rubylode-projects-*`): the overview cards and the projects list.
+- [Rubylode Home](https://github.com/rubylode/redmine-rubylode-home) (`--rubylode-home-*`): My page and the welcome page.
+- [Rubylode To-do](https://github.com/rubylode/redmine-rubylode-todo) (`--todo-*`): the to-do page.
+- [Rubylode Uptime Kuma](https://github.com/rubylode/redmine-rubylode-uptime-kuma) (`--rubylode-uptime-kuma-*`),
+  [Rubylode GlitchTip](https://github.com/rubylode/redmine-rubylode-glitchtip) (`--rubylode-glitchtip-*`),
+  [Rubylode Windmill](https://github.com/rubylode/redmine-rubylode-windmill) (`--rubylode-windmill-*`) and
+  [Rubylode Beszel](https://github.com/rubylode/redmine-rubylode-beszel) (`--rubylode-beszel-*`): the status blocks.
+- [Rubylode Stats](https://github.com/rubylode/redmine-rubylode-stats) (`--stats-tooltip-*`): the chart tooltip.
+- [Rubylode New issue button](https://github.com/rubylode/redmine-rubylode-new-issue-button): a rounded primary button beside the search.
+  Plugins load their stylesheets after the theme's, so these rules start with `body #header` to win whatever the order.
 
 None of them is needed. Without a plugin its rules match nothing.
 
