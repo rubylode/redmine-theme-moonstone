@@ -1,5 +1,7 @@
 # Rubylode Opal for Redmine
 
+<p><img src="docs/thumbnail.png" alt="Rubylode Opal theme" width="160"></p>
+
 A light theme for Redmine 7 and up: white panels on an off-white page, a blue-teal primary colour, and coloured status and priority chips.
 
 It is plain CSS plus one small script (`javascripts/theme.js`, about 45 lines), with no plugin, no build step and no change to
