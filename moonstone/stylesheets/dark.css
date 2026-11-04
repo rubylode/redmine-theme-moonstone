@@ -10,13 +10,13 @@
     color-scheme: dark;
   }
 
-  /* Moonstone's tokens, dark values: a deep slate page, slightly lighter panels, light ink, the teal lifted so it reads on dark, and
-   * the header wash in deep teal, plum and rose. A name not set here keeps its light value from tokens.css. */
+  /* Moonstone's tokens, dark values: a deep slate page, slightly lighter panels, light ink, the blue lifted so it reads on dark, and
+   * the header wash in deep blue, slate and a warm grey. A name not set here keeps its light value from tokens.css. */
   :root {
     --theme-page: #11171c;
     --theme-surface: #182027;
     --theme-surface-sunken: #1c252d;
-    --theme-surface-hover: #1d3138;
+    --theme-surface-hover: #1b2d40;
     --theme-line: #2a353e;
     --theme-line-soft: #26313a;
     --theme-line-strong: #6b7a86;
@@ -25,41 +25,41 @@
     --theme-ink-soft: #c9d3db;
     --theme-ink-muted: #9aa7b3;
 
-    --theme-accent-0: #15292f;
-    --theme-accent-1: #1a3a42;
-    --theme-accent-2: #2b5964;
-    --theme-accent-3: #3f8794;
-    --theme-accent-4: #56aebb;
-    --theme-accent-8: #8fd4de;
-    --theme-accent-9: #c4ecf1;
-    --theme-accent-1-rgb: 26, 58, 66;
+    --theme-accent-0: #14273a;
+    --theme-accent-1: #1a3550;
+    --theme-accent-2: #2a5278;
+    --theme-accent-3: #3d7fb0;
+    --theme-accent-4: #5aa0d6;
+    --theme-accent-8: #a9d3f0;
+    --theme-accent-9: #d3eafa;
+    --theme-accent-1-rgb: 26, 53, 80;
 
-    --theme-secondary-pale: #241f36;
-    --theme-tertiary-pale: #33231d;
-    --theme-accent-pale: #142a30;
+    --theme-secondary-pale: #182231;
+    --theme-tertiary-pale: #1f1f24;
+    --theme-accent-pale: #12263a;
 
-    --theme-link: #6cc4d1;
-    --theme-link-hover: #a3e0e8;
-    --theme-redmine-accent: #6cc4d1;
-    --theme-redmine-accent-rgb: 108, 196, 209;
+    --theme-link: #75b4e2;
+    --theme-link-hover: #a9d3f0;
+    --theme-redmine-accent: #75b4e2;
+    --theme-redmine-accent-rgb: 117, 180, 226;
 
-    --theme-header-background: linear-gradient(115deg, #13262c 0%, #1d1d30 58%, #2a1f24 100%);
-    --theme-header-background-solid: #15232a;
+    --theme-header-background: linear-gradient(115deg, #12263a 0%, #182231 58%, #1f1f24 100%);
+    --theme-header-background-solid: #14212c;
     --theme-header-link: #c9d3db;
-    --theme-header-hover-background: rgba(108, 196, 209, 0.12);
-    --theme-header-line: rgba(108, 196, 209, 0.16);
+    --theme-header-hover-background: rgba(117, 180, 226, 0.12);
+    --theme-header-line: rgba(117, 180, 226, 0.16);
     --theme-header-field-background: rgba(17, 23, 28, 0.6);
     --theme-header-field-border: #6b7a86;
 
-    --theme-button-background: #18323a;
-    --theme-button-border: #2f5d68;
-    --theme-button-ink: #a3e0e8;
+    --theme-button-background: #1a3550;
+    --theme-button-border: #2f5a86;
+    --theme-button-ink: #bfdcf3;
     --theme-danger-soft: #35202a;
     --theme-danger-soft-border: #6b3440;
     --theme-danger-ink: #f2a7ae;
 
-    --theme-focus: #6cc4d1;
-    --theme-focus-halo: rgba(185, 167, 224, 0.35);
+    --theme-focus: #75b4e2;
+    --theme-focus-halo: rgba(117, 180, 226, 0.3);
 
     --theme-chip-ink-mix: #ffffff;
     --theme-chip-ink-share: 55%;

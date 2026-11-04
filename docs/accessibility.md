@@ -21,26 +21,26 @@ identify it (field borders) and for focus indicators.
 | Body text on a panel | `#1c2833` | `#ffffff` | 14.99 |
 | Secondary text on the page | `#56636f` | `#f4f6f8` | 5.68 |
 | Secondary text on a sunken panel or stripe | `#56636f` | `#f3f6f8` | 5.67 |
-| Link on a panel | `#16657a` | `#ffffff` | 6.61 |
-| Link on a hovered row | `#16657a` | `#e2f0f2` | 5.66 |
-| White on the primary gradient, teal end | `#ffffff` | `#1b6b80` | 6.07 |
-| White on the primary gradient, lilac end | `#ffffff` | `#4b5d97` | 6.34 |
-| Tinted button text | `#11505f` | `#e3f0f2` | 7.71 |
+| Link on a panel | `#155c92` | `#ffffff` | 7.05 |
+| Link on a hovered row | `#155c92` | `#e4f0f9` | 6.09 |
+| White on the primary gradient, light end | `#ffffff` | `#2478b8` | 4.72 |
+| White on the primary gradient, dark end | `#ffffff` | `#19659f` | 6.17 |
+| Tinted button text | `#104673` | `#e2eff9` | 8.36 |
 | Delete button text | `#9c2f37` | `#fbe9ea` | 6.24 |
-| Header text on the teal end of the wash | `#1c2833` | `#e6f2f4` | 13.12 |
-| Header text on the lilac middle | `#1c2833` | `#efeafa` | 12.72 |
-| Header links on the peach end | `#2f4150` | `#fcefe7` | 9.35 |
+| Header text on the blue end of the wash | `#1c2833` | `#e6f3fb` | 13.26 |
+| Header text on the pearl middle | `#1c2833` | `#f2f7fb` | 13.90 |
+| Header links on the warm-white end | `#2f4150` | `#f5f3f1` | 9.52 |
 | Status chip New | `#194365` | `#e1ebf3` | 8.55 |
-| Status chip In Progress | `#104e57` | `#dfeef0` | 7.84 |
+| Status chip In Progress | `#2f396e` | `#e6e9f5` | 8.98 |
 | Status chip Resolved | `#1c532f` | `#e2efe6` | 7.61 |
-| Status or priority chip Feedback / High, on a hovered row (the lowest) | `#79530b` | `#dfe2d3` | 5.22 |
+| Status or priority chip Feedback / High, on a hovered row (the lowest) | `#79530b` | `#e0e2d9` | 5.25 |
 | Status chip Closed | `#404750` | `#eaecee` | 7.93 |
 | Status chip Rejected | `#78272d` | `#f7e4e6` | 8.09 |
 | Priority Immediate, white on red | `#ffffff` | `#a8323b` | 6.59 |
 | Field border on a panel (control) | `#7f8c99` | `#ffffff` | 3.43 |
 | Field border on the page (control) | `#7f8c99` | `#f4f6f8` | 3.17 |
-| Header field border on the lilac middle (control) | `#75828f` | `#efeafa` | 3.33 |
-| Focus ring on a panel | `#24808f` | `#ffffff` | 4.61 |
+| Header field border on the pearl middle (control) | `#75828f` | `#f2f7fb` | 3.64 |
+| Focus ring on a panel | `#2478b8` | `#ffffff` | 4.72 |
 
 ## Dark
 
@@ -50,24 +50,24 @@ identify it (field borders) and for focus indicators.
 | Body text on a panel | `#e2e8ed` | `#182027` | 13.34 |
 | Secondary text on a panel | `#9aa7b3` | `#182027` | 6.71 |
 | Secondary text on a sunken panel or stripe | `#9aa7b3` | `#1c252d` | 6.33 |
-| Link on a panel | `#6cc4d1` | `#182027` | 8.20 |
-| Link on a hovered row | `#6cc4d1` | `#1d3138` | 6.75 |
-| White on the primary | `#ffffff` | `#1b6b80` | 6.07 |
-| Tinted button text | `#a3e0e8` | `#18323a` | 9.24 |
+| Link on a panel | `#75b4e2` | `#182027` | 7.36 |
+| Link on a hovered row | `#75b4e2` | `#1b2d40` | 6.27 |
+| White on the primary | `#ffffff` | `#19659f` | 6.17 |
+| Tinted button text | `#bfdcf3` | `#1a3550` | 8.84 |
 | Delete button text | `#f2a7ae` | `#35202a` | 7.84 |
-| Header links on the teal end of the wash | `#c9d3db` | `#13262c` | 10.31 |
-| Header links on the plum middle | `#c9d3db` | `#1d1d30` | 10.88 |
+| Header links on the blue end of the wash | `#c9d3db` | `#12263a` | 10.13 |
+| Header links on the slate middle | `#c9d3db` | `#182231` | 10.54 |
 | Status chip New | `#8ab0cf` | `#1b2e3e` | 6.10 |
-| Status chip In Progress | `#82bac3` | `#19323a` | 6.26 |
+| Status chip In Progress | `#9ea7d8` | `#222b41` | 6.02 |
 | Status chip Resolved | `#8dbf9e` | `#1c332e` | 6.45 |
-| Status or priority chip Feedback / High, on a hovered row | `#e1bf7d` | `#3c4131` | 6.00 |
+| Status or priority chip Feedback / High, on a hovered row | `#e1bf7d` | `#3a3e38` | 6.20 |
 | Status chip Closed | `#aeb4bc` | `#273038` | 6.42 |
 | Status chip Rejected | `#e1979c` | `#38262d` | 6.14 |
 | Code block (kept light) | `#1c2833` | `#eef2f5` | 13.32 |
 | Field border on a panel (control) | `#6b7a86` | `#182027` | 3.73 |
 | Field border on the page (control) | `#6b7a86` | `#11171c` | 4.09 |
-| Header field border on the plum middle (control) | `#6b7a86` | `#1d1d30` | 3.74 |
-| Focus ring on a panel | `#6cc4d1` | `#182027` | 8.20 |
+| Header field border on the slate middle (control) | `#6b7a86` | `#182231` | 3.62 |
+| Focus ring on a panel | `#75b4e2` | `#182027` | 7.36 |
 
 ## Not covered
 

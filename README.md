@@ -2,7 +2,7 @@
 
 <p><img src="docs/thumbnail.png" alt="Rubylode Moonstone theme" width="160"></p>
 
-A light theme for Redmine 7 and up: white panels on an off-white page, a blue-teal primary colour, and coloured status and priority chips.
+A light theme for Redmine 7 and up: white panels on an off-white page, a sky-blue primary colour, and coloured status and priority chips.
 
 It is plain CSS plus one small script (`javascripts/theme.js`, about 45 lines), with no plugin, no build step and no change to
 Redmine itself. The script only reads the page: it puts a status dot beside the group name in an issue list grouped by status,
@@ -47,13 +47,13 @@ The screenshots come from the demo Redmine in this repository; the people, proje
 
 ## What it looks like
 
-- A two-row header. The top bar has a teal-to-lilac-to-peach wash, the Moonstone mark, the global links, the search and project
+- A two-row header. The top bar has a pale sky-blue-to-pearl wash, the Moonstone mark, the global links, the search and project
   switcher as rounded fields, and your avatar. Below it, a white bar holds the project name, the project tabs (the current one
   underlined in the same wash) and the "+" menu.
 - A New issue button beside the search, when the Rubylode New issue button plugin is installed.
-- Lists are white cards with a header band, a hairline under each row, light column lines, faint stripes and a pale teal hover
+- Lists are white cards with a header band, a hairline under each row, light column lines, faint stripes and a pale blue hover
   with a coloured edge.
-- Status is a chip with a dot (New blue, In Progress teal, Resolved green, Feedback amber, Closed grey, Rejected red). Priority is
+- Status is a chip with a dot (New blue, In Progress indigo, Resolved green, Feedback amber, Closed grey, Rejected red). Priority is
   a chip with a five-bar meter: amber for High, red for Urgent, solid red for Immediate.
 - An issue is a card with an edge in the status colour, a large subject, labelled parent strips, a segmented previous / next
   control, an attribute panel with a slim % Done bar, framed subtasks and related issues, and a card per note in the history.
@@ -111,8 +111,8 @@ start with `--theme-` and are the same in every Rubylode theme. The main ones:
 | `--theme-page`, `--theme-surface`, `--theme-surface-sunken`, `--theme-surface-hover` | the page, the panels, sunken panels and stripes, hovered rows |
 | `--theme-line`, `--theme-line-soft`, `--theme-line-strong` | panel borders and row lines, column lines, field borders |
 | `--theme-ink`, `--theme-ink-soft`, `--theme-ink-muted` | text, secondary text, labels and notes |
-| `--theme-accent-0` to `--theme-accent-9` | the teal ramp; `--theme-link`, `--theme-primary` and Redmine's blue ramp point into it |
-| `--theme-secondary`, `--theme-tertiary` and their `-pale` twins | the lilac and peach shimmer, used in the header, the focus halo and the tab underline |
+| `--theme-accent-0` to `--theme-accent-9` | the blue ramp; `--theme-link`, `--theme-primary` and Redmine's blue ramp point into it |
+| `--theme-secondary`, `--theme-tertiary` and their `-pale` twins | the sky and pearl shimmer, used in the header and the tab underline |
 | `--theme-primary-background`, `--theme-header-background` | the primary button and the top bar (gradients in Moonstone) |
 | `--theme-status-new`, `-in-progress`, `-resolved`, `-feedback`, `-closed`, `-rejected` | status colours, by Redmine's default status ids 1 to 6 |
 | `--theme-success`, `--theme-warning`, `--theme-danger`, `--theme-danger-strong` | meaning colours (priority High, Urgent, Immediate) |
@@ -139,8 +139,8 @@ fonts, change `--theme-font` and `--theme-font-monospace` in `moonstone/styleshe
 
 ## Dark mode
 
-Dark mode follows your system setting (`prefers-color-scheme`): a deep slate page, slightly lighter panels, a lighter teal, and
-the header wash in deep teal, plum and rose. Code blocks stay light, since
+Dark mode follows your system setting (`prefers-color-scheme`): a deep slate page, slightly lighter panels, a lighter blue, and
+the header wash in deep blue, slate and warm grey. Code blocks stay light, since
 Redmine's syntax colours are made for a light background. To keep Moonstone light-only, remove the line `@import url(dark.css);`
 from `moonstone/stylesheets/responsive.css`; every dark value is in that one file.
 

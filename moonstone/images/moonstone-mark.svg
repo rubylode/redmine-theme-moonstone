@@ -1,19 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
   <title>Moonstone</title>
-  <defs>
-    <linearGradient id="moonstone-body" x1="0.1" y1="0.05" x2="0.9" y2="0.95">
-      <stop offset="0" stop-color="#8fd0da"/>
-      <stop offset="0.5" stop-color="#b3a5e2"/>
-      <stop offset="1" stop-color="#f4bfa3"/>
-    </linearGradient>
-    <radialGradient id="moonstone-glow" cx="0.36" cy="0.3" r="0.62">
-      <stop offset="0" stop-color="#ffffff" stop-opacity="0.9"/>
-      <stop offset="0.55" stop-color="#ffffff" stop-opacity="0.15"/>
-      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
-  <ellipse cx="16" cy="16" rx="11.5" ry="13.5" fill="url(#moonstone-body)"/>
-  <ellipse cx="16" cy="16" rx="11.5" ry="13.5" fill="url(#moonstone-glow)"/>
-  <ellipse cx="16" cy="16" rx="11.5" ry="13.5" fill="none" stroke="#1b6b80" stroke-width="2"/>
-  <path d="M10.5 11.5c1.6-2.6 4-3.9 6.8-4" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.95"/>
+  <ellipse cx="16" cy="16" rx="14.5" ry="5" transform="rotate(-28 16 16)" fill="none" stroke="#75b4e2" stroke-width="1.7"/>
+  <g transform="translate(5.1 4.1) scale(0.68)" stroke="#104673" stroke-width="1" stroke-linejoin="round">
+    <polygon points="8,6 24,6 21,12 11,12" fill="#a9d3f0"/>
+    <polygon points="8,6 11,12 2,12" fill="#75b4e2"/>
+    <polygon points="24,6 30,12 21,12" fill="#5aa0d6"/>
+    <polygon points="2,12 11,12 16,29" fill="#2478b8"/>
+    <polygon points="11,12 21,12 16,29" fill="#3f92d0"/>
+    <polygon points="21,12 30,12 16,29" fill="#19659f"/>
+  </g>
+  <circle cx="27.2" cy="8.1" r="2.7" fill="#e8f3fc" stroke="#155c92" stroke-width="1.2"/>
 </svg>

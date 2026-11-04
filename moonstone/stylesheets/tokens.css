@@ -9,7 +9,7 @@
   --theme-page: #f4f6f8;
   --theme-surface: #ffffff;
   --theme-surface-sunken: #f3f6f8;      /* attribute panels, journal headers, table stripes */
-  --theme-surface-hover: #e2f0f2;       /* hovered rows and menu items: a pale blue-teal */
+  --theme-surface-hover: #e4f0f9;       /* hovered rows and menu items: a pale sky blue */
   --theme-line: #e3e8ec;                /* row lines and panel borders */
   --theme-line-soft: #e9edf1;           /* column lines, quiet chips */
   --theme-line-strong: #7f8c99;         /* field borders: 3:1 against the page and the panels, as controls need */
@@ -21,44 +21,44 @@
   --theme-ink-on-colour: #ffffff;       /* text on a strong colour: priority Immediate, a delete button on hover */
   --theme-ink-on-light-colour: #13202b; /* text on a light avatar colour */
 
-  /* The accent: a soft blue-teal ramp, light to dark. Step 6 is the button colour, step 7 the link colour. */
-  --theme-accent-0: #eef7f8;
-  --theme-accent-1: #d9eef1;
-  --theme-accent-2: #a9d6dd;
-  --theme-accent-3: #6fb8c4;
-  --theme-accent-4: #3f9aaa;
-  --theme-accent-5: #24808f;
-  --theme-accent-6: #1b6b80;
-  --theme-accent-7: #16657a;
-  --theme-accent-8: #11505f;
-  --theme-accent-9: #0b3540;
-  --theme-accent-1-rgb: 217, 238, 241;
+  /* The accent: a sky blue ramp, light to dark. Step 6 is the button colour, step 7 the link colour. */
+  --theme-accent-0: #edf6fc;
+  --theme-accent-1: #d8ebf8;
+  --theme-accent-2: #abd3ee;
+  --theme-accent-3: #75b4e2;
+  --theme-accent-4: #3f92d0;
+  --theme-accent-5: #2478b8;
+  --theme-accent-6: #19659f;
+  --theme-accent-7: #155c92;
+  --theme-accent-8: #104673;
+  --theme-accent-9: #0a2f4e;
+  --theme-accent-1-rgb: 216, 235, 248;
 
-  /* The moonstone shimmer: a faint lilac and peach, used sparingly (the header, focus rings, the primary button). */
-  --theme-secondary: #b9a7e0;
-  --theme-secondary-pale: #efeafa;
-  --theme-tertiary: #f2b89c;
-  --theme-tertiary-pale: #fcefe7;
-  --theme-accent-pale: #e6f2f4;
+  /* The moonstone shimmer: a pale sky and a warm pearl, used sparingly (the header, the selected tab, the sidebar tile). */
+  --theme-secondary: #9cc6e8;
+  --theme-secondary-pale: #f2f7fb;
+  --theme-tertiary: #e6dfd9;
+  --theme-tertiary-pale: #f5f3f1;
+  --theme-accent-pale: #e6f3fb;
 
   --theme-link: var(--theme-accent-7);
   --theme-link-hover: var(--theme-accent-8);
   --theme-primary: var(--theme-accent-6);
-  --theme-primary-hover: #14566a;
+  --theme-primary-hover: #155c92;
   --theme-ink-on-primary: #ffffff;
-  --theme-primary-background: linear-gradient(135deg, #1b6b80 0%, #2f6489 60%, #4b5d97 100%);
-  --theme-primary-background-hover: linear-gradient(135deg, #14566a 0%, #24506f 60%, #3b4a7c 100%);
+  --theme-primary-background: linear-gradient(135deg, #19659f 0%, #2478b8 100%);
+  --theme-primary-background-hover: linear-gradient(135deg, #155c92 0%, #1f6aa5 100%);
   --theme-redmine-accent: var(--theme-accent-6); /* Redmine's own --oc-blue-7 */
-  --theme-redmine-accent-rgb: 27, 107, 128;
+  --theme-redmine-accent-rgb: 25, 101, 159;
   --theme-selected-tab-border-image: linear-gradient(90deg, var(--theme-accent-4), var(--theme-secondary), var(--theme-tertiary)) 1;
 
-  /* The header: a pale wash from teal through lilac to peach, dark ink on it. */
+  /* The header: a pale wash from sky blue through pearl to a warm white, dark ink on it. */
   --theme-header-background: linear-gradient(115deg, var(--theme-accent-pale) 0%, var(--theme-secondary-pale) 58%, var(--theme-tertiary-pale) 100%);
-  --theme-header-background-solid: #eaf2f5; /* the phone header and the slide-out menu paint with one colour */
+  --theme-header-background-solid: #eaf2f8; /* the phone header and the slide-out menu paint with one colour */
   --theme-header-ink: var(--theme-ink);
   --theme-header-link: var(--theme-ink-soft);
-  --theme-header-hover-background: rgba(27, 107, 128, 0.09);
-  --theme-header-line: rgba(27, 107, 128, 0.16);
+  --theme-header-hover-background: rgba(25, 101, 159, 0.09);
+  --theme-header-line: rgba(25, 101, 159, 0.16);
   --theme-header-field-background: rgba(255, 255, 255, 0.72);
   --theme-header-field-border: #75828f;
   --theme-mark-image: url("../images/moonstone-mark.svg");
@@ -74,20 +74,20 @@
   --theme-sidebar-selected-edge: var(--theme-accent-6);
 
   /* Buttons that are not the primary: a tint of the primary. Delete buttons: a tint of red. */
-  --theme-button-background: #e3f0f2;
-  --theme-button-border: #a9d6dd;
-  --theme-button-ink: #11505f;
+  --theme-button-background: #e2eff9;
+  --theme-button-border: #abd3ee;
+  --theme-button-ink: #104673;
   --theme-danger-soft: #fbe9ea;
   --theme-danger-soft-border: #efb9bd;
   --theme-danger-ink: #9c2f37;
 
-  /* Focus: a teal outline with a lilac halo. */
+  /* Focus: a blue outline with a soft blue halo. */
   --theme-focus: var(--theme-accent-5);
-  --theme-focus-halo: rgba(185, 167, 224, 0.45);
+  --theme-focus-halo: rgba(117, 180, 226, 0.4);
 
   /* Meaning. Status ids in a default Redmine: 1 New, 2 In Progress, 3 Resolved, 4 Feedback, 5 Closed, 6 Rejected. */
   --theme-status-new: #2a6fa8;
-  --theme-status-in-progress: #1b8291;
+  --theme-status-in-progress: #4f5fb8;
   --theme-status-resolved: #2f8a4e;
   --theme-status-feedback: #c98a12;
   --theme-status-closed: #6b7785;
@@ -134,7 +134,7 @@
   --theme-border-style: solid;
   --theme-shadow-card: 0 1px 2px rgba(28, 40, 51, 0.06), 0 2px 8px rgba(28, 40, 51, 0.04);
   --theme-shadow-popup: 0 10px 28px rgba(28, 40, 51, 0.16), 0 0 1px rgba(28, 40, 51, 0.3);
-  --theme-shadow-primary-button: 0 1px 2px rgba(27, 107, 128, 0.25);
+  --theme-shadow-primary-button: 0 1px 2px rgba(25, 101, 159, 0.3);
   --theme-shadow-header-scrolled: 0 2px 10px rgba(28, 40, 51, 0.08);
   --theme-space-small: 8px;
   --theme-space: 16px;
