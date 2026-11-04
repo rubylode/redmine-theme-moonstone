@@ -8,7 +8,7 @@
 [![license](https://img.shields.io/github/license/rubylode/redmine-theme-moonstone)](https://github.com/rubylode/redmine-theme-moonstone/blob/main/LICENSE)
 ![Redmine](https://img.shields.io/badge/Redmine-7.0-b22222)
 
-A light theme for Redmine 7 and up: white panels on an off-white page, a sky-blue primary colour, and coloured status and priority chips.
+A light theme for Redmine 7 and up: white panels on an off-white page, a steel-blue accent for links and buttons, and coloured status and priority chips.
 
 It is plain CSS plus one small script (`javascripts/theme.js`, about 45 lines), with no plugin, no build step and no change to
 Redmine itself. The script only reads the page: it puts a status dot beside the group name in an issue list grouped by status,
