@@ -22,20 +22,20 @@
   --theme-ink-on-light-colour: #13202b; /* text on a light avatar colour */
 
   /* The accent: a sky blue ramp, light to dark. Step 6 is the button colour, step 7 the link colour. */
-  --theme-accent-0: #edf6fc;
-  --theme-accent-1: #d8ebf8;
-  --theme-accent-2: #abd3ee;
-  --theme-accent-3: #75b4e2;
-  --theme-accent-4: #3f92d0;
-  --theme-accent-5: #2478b8;
-  --theme-accent-6: #19659f;
-  --theme-accent-7: #155c92;
-  --theme-accent-8: #104673;
-  --theme-accent-9: #0a2f4e;
-  --theme-accent-1-rgb: 216, 235, 248;
+  --theme-accent-0: #edf2f8;
+  --theme-accent-1: #d9e5f0;
+  --theme-accent-2: #b3cade;
+  --theme-accent-3: #86a9ca;
+  --theme-accent-4: #628DB6;
+  --theme-accent-5: #4c78a4;
+  --theme-accent-6: #3E5B76;
+  --theme-accent-7: #116699;
+  --theme-accent-8: #0d4a70;
+  --theme-accent-9: #08304a;
+  --theme-accent-1-rgb: 217, 229, 240;
 
   /* The moonstone shimmer: a pale sky and a warm pearl, used sparingly (the header, the selected tab, the sidebar tile). */
-  --theme-secondary: #9cc6e8;
+  --theme-secondary: #8fb0d2;
   --theme-secondary-pale: #f2f7fb;
   --theme-tertiary: #e6dfd9;
   --theme-tertiary-pale: #f5f3f1;
@@ -44,12 +44,12 @@
   --theme-link: var(--theme-accent-7);
   --theme-link-hover: var(--theme-accent-8);
   --theme-primary: var(--theme-accent-6);
-  --theme-primary-hover: #155c92;
+  --theme-primary-hover: #324b62;
   --theme-ink-on-primary: #ffffff;
-  --theme-primary-background: linear-gradient(135deg, #19659f 0%, #2478b8 100%);
-  --theme-primary-background-hover: linear-gradient(135deg, #155c92 0%, #1f6aa5 100%);
+  --theme-primary-background: linear-gradient(135deg, #3E5B76 0%, #4c78a4 100%);
+  --theme-primary-background-hover: linear-gradient(135deg, #324b62 0%, #3f6a94 100%);
   --theme-redmine-accent: var(--theme-accent-6); /* Redmine's own --oc-blue-7 */
-  --theme-redmine-accent-rgb: 25, 101, 159;
+  --theme-redmine-accent-rgb: 62, 91, 118;
   --theme-selected-tab-border-image: linear-gradient(90deg, var(--theme-accent-4), var(--theme-secondary), var(--theme-tertiary)) 1;
 
   /* The header: a pale wash from sky blue through pearl to a warm white, dark ink on it. */
@@ -57,8 +57,8 @@
   --theme-header-background-solid: #eaf2f8; /* the phone header and the slide-out menu paint with one colour */
   --theme-header-ink: var(--theme-ink);
   --theme-header-link: var(--theme-ink-soft);
-  --theme-header-hover-background: rgba(25, 101, 159, 0.09);
-  --theme-header-line: rgba(25, 101, 159, 0.16);
+  --theme-header-hover-background: rgba(62, 91, 118, 0.09);
+  --theme-header-line: rgba(62, 91, 118, 0.16);
   --theme-header-field-background: rgba(255, 255, 255, 0.72);
   --theme-header-field-border: #75828f;
   --theme-mark-image: url("../images/moonstone-mark.svg");
@@ -74,16 +74,16 @@
   --theme-sidebar-selected-edge: var(--theme-accent-6);
 
   /* Buttons that are not the primary: a tint of the primary. Delete buttons: a tint of red. */
-  --theme-button-background: #e2eff9;
-  --theme-button-border: #abd3ee;
-  --theme-button-ink: #104673;
+  --theme-button-background: #e4ecf4;
+  --theme-button-border: #b3cade;
+  --theme-button-ink: #0d4a70;
   --theme-danger-soft: #fbe9ea;
   --theme-danger-soft-border: #efb9bd;
   --theme-danger-ink: #9c2f37;
 
   /* Focus: a blue outline with a soft blue halo. */
   --theme-focus: var(--theme-accent-5);
-  --theme-focus-halo: rgba(117, 180, 226, 0.4);
+  --theme-focus-halo: rgba(134, 169, 202, 0.4);
 
   /* Meaning. Status ids in a default Redmine: 1 New, 2 In Progress, 3 Resolved, 4 Feedback, 5 Closed, 6 Rejected. */
   --theme-status-new: #2a6fa8;
@@ -134,7 +134,7 @@
   --theme-border-style: solid;
   --theme-shadow-card: 0 1px 2px rgba(28, 40, 51, 0.06), 0 2px 8px rgba(28, 40, 51, 0.04);
   --theme-shadow-popup: 0 10px 28px rgba(28, 40, 51, 0.16), 0 0 1px rgba(28, 40, 51, 0.3);
-  --theme-shadow-primary-button: 0 1px 2px rgba(25, 101, 159, 0.3);
+  --theme-shadow-primary-button: 0 1px 2px rgba(62, 91, 118, 0.3);
   --theme-shadow-header-scrolled: 0 2px 10px rgba(28, 40, 51, 0.08);
   --theme-space-small: 8px;
   --theme-space: 16px;

@@ -16,7 +16,7 @@
     --theme-page: #11171c;
     --theme-surface: #182027;
     --theme-surface-sunken: #1c252d;
-    --theme-surface-hover: #1b2d40;
+    --theme-surface-hover: #222c39;
     --theme-line: #2a353e;
     --theme-line-soft: #26313a;
     --theme-line-strong: #6b7a86;
@@ -25,41 +25,41 @@
     --theme-ink-soft: #c9d3db;
     --theme-ink-muted: #9aa7b3;
 
-    --theme-accent-0: #14273a;
-    --theme-accent-1: #1a3550;
-    --theme-accent-2: #2a5278;
-    --theme-accent-3: #3d7fb0;
-    --theme-accent-4: #5aa0d6;
-    --theme-accent-8: #a9d3f0;
-    --theme-accent-9: #d3eafa;
-    --theme-accent-1-rgb: 26, 53, 80;
+    --theme-accent-0: #1b2533;
+    --theme-accent-1: #243346;
+    --theme-accent-2: #384e6a;
+    --theme-accent-3: #52779b;
+    --theme-accent-4: #7198bf;
+    --theme-accent-8: #b6cee3;
+    --theme-accent-9: #dae7f3;
+    --theme-accent-1-rgb: 36, 51, 70;
 
     --theme-secondary-pale: #182231;
     --theme-tertiary-pale: #1f1f24;
-    --theme-accent-pale: #12263a;
+    --theme-accent-pale: #192433;
 
-    --theme-link: #75b4e2;
-    --theme-link-hover: #a9d3f0;
-    --theme-redmine-accent: #75b4e2;
-    --theme-redmine-accent-rgb: 117, 180, 226;
+    --theme-link: #89acce;
+    --theme-link-hover: #b6cee3;
+    --theme-redmine-accent: #89acce;
+    --theme-redmine-accent-rgb: 137, 172, 206;
 
-    --theme-header-background: linear-gradient(115deg, #12263a 0%, #182231 58%, #1f1f24 100%);
+    --theme-header-background: linear-gradient(115deg, #192433 0%, #182231 58%, #1f1f24 100%);
     --theme-header-background-solid: #14212c;
     --theme-header-link: #c9d3db;
-    --theme-header-hover-background: rgba(117, 180, 226, 0.12);
-    --theme-header-line: rgba(117, 180, 226, 0.16);
+    --theme-header-hover-background: rgba(137, 172, 206, 0.12);
+    --theme-header-line: rgba(137, 172, 206, 0.16);
     --theme-header-field-background: rgba(17, 23, 28, 0.6);
     --theme-header-field-border: #6b7a86;
 
-    --theme-button-background: #1a3550;
-    --theme-button-border: #2f5a86;
-    --theme-button-ink: #bfdcf3;
+    --theme-button-background: #243346;
+    --theme-button-border: #3f5776;
+    --theme-button-ink: #c9d9e9;
     --theme-danger-soft: #35202a;
     --theme-danger-soft-border: #6b3440;
     --theme-danger-ink: #f2a7ae;
 
-    --theme-focus: #75b4e2;
-    --theme-focus-halo: rgba(117, 180, 226, 0.3);
+    --theme-focus: #89acce;
+    --theme-focus-halo: rgba(137, 172, 206, 0.3);
 
     --theme-chip-ink-mix: #ffffff;
     --theme-chip-ink-share: 55%;
