@@ -1,6 +1,6 @@
-# Rubylode Opal for Redmine
+# Rubylode Moonstone for Redmine
 
-<p><img src="docs/thumbnail.png" alt="Rubylode Opal theme" width="160"></p>
+<p><img src="docs/thumbnail.png" alt="Rubylode Moonstone theme" width="160"></p>
 
 A light theme for Redmine 7 and up: white panels on an off-white page, a blue-teal primary colour, and coloured status and priority chips.
 
@@ -9,7 +9,7 @@ Redmine itself. The script only reads the page: it puts a status dot beside the 
 and gives the top bar a shadow once the page scrolls. Without it the theme still works. The dark set follows your system setting
 (see [Dark mode](#dark-mode)).
 
-![A walk through Rubylode Opal: the project, the issue list, an issue and the new issue form](docs/demo/walkthrough-light.gif)
+![A walk through Rubylode Moonstone: the project, the issue list, an issue and the new issue form](docs/demo/walkthrough-light.gif)
 
 | | |
 |---|---|
@@ -20,7 +20,7 @@ and gives the top bar a shadow once the page scrolls. Without it the theme still
 
 Dark mode:
 
-![A walk through Rubylode Opal in dark mode](docs/demo/walkthrough-dark.gif)
+![A walk through Rubylode Moonstone in dark mode](docs/demo/walkthrough-dark.gif)
 
 | | |
 |---|---|
@@ -47,7 +47,7 @@ The screenshots come from the demo Redmine in this repository; the people, proje
 
 ## What it looks like
 
-- A two-row header. The top bar has a teal-to-lilac-to-peach wash, the Opal mark, the global links, the search and project
+- A two-row header. The top bar has a teal-to-lilac-to-peach wash, the Moonstone mark, the global links, the search and project
   switcher as rounded fields, and your avatar. Below it, a white bar holds the project name, the project tabs (the current one
   underlined in the same wash) and the "+" menu.
 - A New issue button beside the search, when the Rubylode New issue button plugin is installed.
@@ -62,13 +62,13 @@ The screenshots come from the demo Redmine in this repository; the people, proje
 
 ## Install
 
-1. Download the zip attached to the latest release (the Releases page of this repository) and unzip it inside the `themes` folder of your Redmine, so that `themes/opal/stylesheets/application.css` exists. Or clone this repository and copy (or link) its `opal` folder into `themes/`.
+1. Download the zip attached to the latest release (the Releases page of this repository) and unzip it inside the `themes` folder of your Redmine, so that `themes/moonstone/stylesheets/application.css` exists. Or clone this repository and copy (or link) its `moonstone` folder into `themes/`.
 2. Restart Redmine.
-3. In Administration, Settings, Display, choose **Opal** as the theme and save.
+3. In Administration, Settings, Display, choose **Moonstone** as the theme and save.
 
 To go back, choose another theme on the same page. Nothing is written to the database apart from that setting.
 
-The theme folder holds the stylesheets, `javascripts/theme.js`, the mark (`images/opal-mark.svg`) and a favicon
+The theme folder holds the stylesheets, `javascripts/theme.js`, the mark (`images/moonstone-mark.svg`) and a favicon
 (`favicon/favicon.ico`, which Redmine links on every page while the theme is chosen). It ships no fonts: it uses the system's own.
 
 ## What is covered
@@ -83,8 +83,8 @@ Flash messages, tabs, the right-click menu, dropdowns, pagination, the text edit
 <!-- rubylode-plugins:start -->
 ## Rubylode plugins
 
-Opal styles the Rubylode plugins' blocks natively. Each plugin draws with its own CSS custom properties, and one section of the
-theme, `opal/stylesheets/plugins.css`, points them at Opal's tokens, so the blocks follow the theme in light and dark:
+Moonstone styles the Rubylode plugins' blocks natively. Each plugin draws with its own CSS custom properties, and one section of the
+theme, `moonstone/stylesheets/plugins.css`, points them at Moonstone's tokens, so the blocks follow the theme in light and dark:
 
 - [Rubylode Projects](https://github.com/rubylode/redmine-rubylode-projects) (`--rubylode-projects-*`): the overview cards and the projects list.
 - [Rubylode Home](https://github.com/rubylode/redmine-rubylode-home) (`--rubylode-home-*`): My page and the welcome page.
@@ -102,8 +102,8 @@ None of them is needed. Without a plugin its rules match nothing.
 
 ## Customising
 
-Every colour, corner, shadow, font and a few sizes are custom properties in `opal/stylesheets/tokens.css` (light values) and
-`opal/stylesheets/dark.css` (dark values). Change them there, or override them from a stylesheet of your own. The names
+Every colour, corner, shadow, font and a few sizes are custom properties in `moonstone/stylesheets/tokens.css` (light values) and
+`moonstone/stylesheets/dark.css` (dark values). Change them there, or override them from a stylesheet of your own. The names
 start with `--theme-` and are the same in every Rubylode theme. The main ones:
 
 | Token | What it is |
@@ -113,7 +113,7 @@ start with `--theme-` and are the same in every Rubylode theme. The main ones:
 | `--theme-ink`, `--theme-ink-soft`, `--theme-ink-muted` | text, secondary text, labels and notes |
 | `--theme-accent-0` to `--theme-accent-9` | the teal ramp; `--theme-link`, `--theme-primary` and Redmine's blue ramp point into it |
 | `--theme-secondary`, `--theme-tertiary` and their `-pale` twins | the lilac and peach shimmer, used in the header, the focus halo and the tab underline |
-| `--theme-primary-background`, `--theme-header-background` | the primary button and the top bar (gradients in Opal) |
+| `--theme-primary-background`, `--theme-header-background` | the primary button and the top bar (gradients in Moonstone) |
 | `--theme-status-new`, `-in-progress`, `-resolved`, `-feedback`, `-closed`, `-rejected` | status colours, by Redmine's default status ids 1 to 6 |
 | `--theme-success`, `--theme-warning`, `--theme-danger`, `--theme-danger-strong` | meaning colours (priority High, Urgent, Immediate) |
 | `--theme-radius-small`, `--theme-radius`, `--theme-radius-panel`, `--theme-radius-pill` | corners of fields, cards, panels and pills |
@@ -125,24 +125,24 @@ The rest (messages, avatars, diffs, the Gantt chart, the header heights, the ico
 comment each in `tokens.css`.
 
 Status and priority colours are matched by Redmine's default ids (statuses 1 New to 6 Rejected, priorities 1 Low to 5
-Immediate). If yours differ, change the ids in the "issue list" and "issue page" sections of `opal/stylesheets/structure.css`.
+Immediate). If yours differ, change the ids in the "issue list" and "issue page" sections of `moonstone/stylesheets/structure.css`.
 
 The labels "Parent" and "Ancestor" above an issue's subject are drawn by CSS, so they are in English only.
 
 ## Fonts
 
-Opal ships its own fonts, so text looks the same on every system and nothing is loaded from another site: Noto Sans for
-text and Noto Sans Mono for code, as woff2 files in `opal/fonts/` (latin and latin-ext). Both are under the SIL Open
+Moonstone ships its own fonts, so text looks the same on every system and nothing is loaded from another site: Noto Sans for
+text and Noto Sans Mono for code, as woff2 files in `moonstone/fonts/` (latin and latin-ext). Both are under the SIL Open
 Font License 1.1; the licence texts are in the same folder. A browser downloads a file only when a page uses it. To use other
-fonts, change `--theme-font` and `--theme-font-monospace` in `opal/stylesheets/tokens.css`. The size of running text is
+fonts, change `--theme-font` and `--theme-font-monospace` in `moonstone/stylesheets/tokens.css`. The size of running text is
 `--theme-font-size` (16px), and every other text size follows it.
 
 ## Dark mode
 
 Dark mode follows your system setting (`prefers-color-scheme`): a deep slate page, slightly lighter panels, a lighter teal, and
 the header wash in deep teal, plum and rose. Code blocks stay light, since
-Redmine's syntax colours are made for a light background. To keep Opal light-only, remove the line `@import url(dark.css);`
-from `opal/stylesheets/responsive.css`; every dark value is in that one file.
+Redmine's syntax colours are made for a light background. To keep Moonstone light-only, remove the line `@import url(dark.css);`
+from `moonstone/stylesheets/responsive.css`; every dark value is in that one file.
 
 ## Accessibility
 
@@ -189,7 +189,7 @@ files until it restarts.
 
 Every push starts a real Redmine from its Docker image (7.0.2 and the 7.0 line), loads every page of the theme in light and dark at desktop and phone width, and fails on console errors, failed requests, sideways scrolling and low text contrast. On GitHub that is `.github/workflows/check.yml`, on GitHub's own runners, and it also runs on pull requests. On a self-hosted Gitea it is `.gitea/workflows/check.yml`, which runs only on pushes to `main`, because that runner works on the host with Docker access and must only run code that is already merged.
 
-A tag such as `v1.0.0` runs the same check, builds `opal-<version>.zip` holding the theme folder, and attaches it to a release with the matching section of `CHANGELOG.md` as its notes (`release.yml` in the same folders). The tag needs a section for that version in the changelog. More on both, and on keeping the self-hosted runner safe, in [docs/ci.md](docs/ci.md).
+A tag such as `v1.0.0` runs the same check, builds `moonstone-<version>.zip` holding the theme folder, and attaches it to a release with the matching section of `CHANGELOG.md` as its notes (`release.yml` in the same folders). The tag needs a section for that version in the changelog. More on both, and on keeping the self-hosted runner safe, in [docs/ci.md](docs/ci.md).
 
 ## License
 

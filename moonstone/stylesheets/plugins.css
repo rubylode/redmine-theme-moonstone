@@ -1,4 +1,4 @@
-/* Opal, a theme for Redmine 7
+/* Moonstone, a theme for Redmine 7
  * Copyright (C) 2026  Nick Gorbikoff
  * GNU General Public License, version 2 or later. See the LICENSE file.
  * Generated from the shared base of the Rubylode themes: a change made here is overwritten by the next build. */

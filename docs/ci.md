@@ -4,7 +4,7 @@
 
 `.github/workflows/check.yml` runs on every push and pull request, on GitHub's own runners: it starts Redmine 7.0.2 and the
 7.0 line from the official Docker image, loads the demo data and runs the page check. `.github/workflows/release.yml` runs on
-a `v*` tag (or by hand, from a tag): the same check, then a zip of the `opal` folder attached to a GitHub release, with the
+a `v*` tag (or by hand, from a tag): the same check, then a zip of the `moonstone` folder attached to a GitHub release, with the
 matching section of `CHANGELOG.md` as its notes.
 
 ## Gitea

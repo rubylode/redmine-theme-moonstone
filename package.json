@@ -1,7 +1,7 @@
 {
-  "name": "redmine-theme-opal",
+  "name": "redmine-theme-moonstone",
   "private": true,
-  "description": "Development tools for the Opal theme: the page check, the screenshots and the recording.",
+  "description": "Development tools for the Moonstone theme: the page check, the screenshots and the recording.",
   "license": "GPL-2.0-or-later",
   "type": "module",
   "scripts": {

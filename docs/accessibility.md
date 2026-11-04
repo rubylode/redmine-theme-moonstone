@@ -1,6 +1,6 @@
 # Contrast
 
-Opal aims at WCAG 2.2 AA in light and dark: 4.5:1 for text (3:1 for large text), and 3:1 for the parts of a control that
+Moonstone aims at WCAG 2.2 AA in light and dark: 4.5:1 for text (3:1 for large text), and 3:1 for the parts of a control that
 identify it (field borders) and for focus indicators.
 
 ## How it is measured

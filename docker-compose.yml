@@ -5,14 +5,14 @@
 services:
   redmine:
     image: redmine:${REDMINE_TAG:-7.0.2}
-    container_name: redmine-theme-opal-dev
+    container_name: redmine-theme-moonstone-dev
     ports:
       - "127.0.0.1:3110:3000"
     environment:
       # The image ships without the development gems, so production is the mode it can boot in.
       RAILS_ENV: production
     volumes:
-      - ./opal:/usr/src/redmine/themes/opal
+      - ./moonstone:/usr/src/redmine/themes/moonstone
       - ./test/seed.rb:/usr/src/redmine/seed.rb:ro
       - redmine-files:/usr/src/redmine/files
       - redmine-sqlite:/usr/src/redmine/sqlite

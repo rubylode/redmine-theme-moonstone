@@ -2,6 +2,15 @@
 
 All notable changes to this theme. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [2.0.0] - 2026-11-03
+
+### Changed
+
+- The theme is renamed from Opal to Moonstone, because Redmine.org already lists a theme called Opale. The theme folder is now
+  `themes/moonstone` (it was `themes/opal`) and the release zip is `moonstone-<version>.zip`. The look is unchanged. If you
+  had Opal installed, remove `themes/opal`, unzip Moonstone into `themes`, and choose Moonstone in Administration, Settings,
+  Display. The repository moved to `rubylode/redmine-theme-moonstone`; the old address redirects.
+
 ## [1.1.3] - 2026-11-03
 
 ### Added

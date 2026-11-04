@@ -1,9 +1,9 @@
-/* Opal, a theme for Redmine 7
+/* Moonstone, a theme for Redmine 7
  * Copyright (C) 2026  Nick Gorbikoff
  * GNU General Public License, version 2 or later. See the LICENSE file.
  * Generated from the shared base of the Rubylode themes: a change made here is overwritten by the next build. */
 
-/* Opal's tokens, light values. The dark values of the same names are in dark.css. */
+/* Moonstone's tokens, light values. The dark values of the same names are in dark.css. */
 :root {
   /* Surfaces: a milky, cool off-white page with white panels on it. */
   --theme-page: #f4f6f8;
@@ -34,7 +34,7 @@
   --theme-accent-9: #0b3540;
   --theme-accent-1-rgb: 217, 238, 241;
 
-  /* The opal shimmer: a faint lilac and peach, used sparingly (the header, focus rings, the primary button). */
+  /* The moonstone shimmer: a faint lilac and peach, used sparingly (the header, focus rings, the primary button). */
   --theme-secondary: #b9a7e0;
   --theme-secondary-pale: #efeafa;
   --theme-tertiary: #f2b89c;
@@ -61,7 +61,7 @@
   --theme-header-line: rgba(27, 107, 128, 0.16);
   --theme-header-field-background: rgba(255, 255, 255, 0.72);
   --theme-header-field-border: #75828f;
-  --theme-mark-image: url("../images/opal-mark.svg");
+  --theme-mark-image: url("../images/moonstone-mark.svg");
 
   /* The project sidebar, in the sidebar layout only ("layout": "sidebar" in theme.json). */
   --theme-sidebar-width: 240px;
