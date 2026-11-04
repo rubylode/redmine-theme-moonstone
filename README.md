@@ -2,6 +2,12 @@
 
 <p><img src="docs/thumbnail.png" alt="Rubylode Moonstone theme" width="160"></p>
 
+[![check](https://img.shields.io/github/actions/workflow/status/rubylode/redmine-theme-moonstone/check.yml?branch=main&label=check)](https://github.com/rubylode/redmine-theme-moonstone/actions/workflows/check.yml)
+[![security](https://img.shields.io/github/actions/workflow/status/rubylode/redmine-theme-moonstone/security.yml?branch=main&label=security)](https://github.com/rubylode/redmine-theme-moonstone/actions/workflows/security.yml)
+[![version](https://img.shields.io/github/v/tag/rubylode/redmine-theme-moonstone?sort=semver&label=version)](https://github.com/rubylode/redmine-theme-moonstone/tags)
+[![license](https://img.shields.io/github/license/rubylode/redmine-theme-moonstone)](https://github.com/rubylode/redmine-theme-moonstone/blob/main/LICENSE)
+![Redmine](https://img.shields.io/badge/Redmine-7.0-b22222)
+
 A light theme for Redmine 7 and up: white panels on an off-white page, a sky-blue primary colour, and coloured status and priority chips.
 
 It is plain CSS plus one small script (`javascripts/theme.js`, about 45 lines), with no plugin, no build step and no change to
