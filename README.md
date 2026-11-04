@@ -155,8 +155,8 @@ from `moonstone/stylesheets/responsive.css`; every dark value is in that one fil
 Text and controls meet WCAG AA in both modes. The page check measures every visible text against the colour behind it on every
 page; the tokens were also measured one by one, including the parts the check cannot see (text on the header gradient, field
 borders, focus rings). The measured ratios are in [docs/accessibility.md](docs/accessibility.md). In short: body text 13.8:1 in
-light and 14.6:1 in dark, secondary text at least 5.6:1 and 6.3:1, links at least 5.7:1 and 6.8:1, white on the primary at least
-6.1:1, every status and priority chip at least 5.2:1, field borders and focus rings at least 3.2:1.
+light and 14.6:1 in dark, secondary text at least 5.6:1 and 6.3:1, links at least 5.3:1 and 5.9:1, white on the primary at least
+4.6:1, every status and priority chip at least 5.2:1, field borders and focus rings at least 3.2:1.
 
 ## Compatibility
 

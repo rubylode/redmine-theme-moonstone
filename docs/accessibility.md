@@ -21,11 +21,12 @@ identify it (field borders) and for focus indicators.
 | Body text on a panel | `#1c2833` | `#ffffff` | 14.99 |
 | Secondary text on the page | `#56636f` | `#f4f6f8` | 5.68 |
 | Secondary text on a sunken panel or stripe | `#56636f` | `#f3f6f8` | 5.67 |
-| Link on a panel | `#155c92` | `#ffffff` | 7.05 |
-| Link on a hovered row | `#155c92` | `#e4f0f9` | 6.09 |
-| White on the primary gradient, light end | `#ffffff` | `#2478b8` | 4.72 |
-| White on the primary gradient, dark end | `#ffffff` | `#19659f` | 6.17 |
-| Tinted button text | `#104673` | `#e2eff9` | 8.36 |
+| Link on a panel | `#116699` | `#ffffff` | 6.21 |
+| Link on the page | `#116699` | `#f4f6f8` | 5.73 |
+| Link on a hovered row | `#116699` | `#e4f0f9` | 5.36 |
+| White on the primary gradient, light end | `#ffffff` | `#4c78a4` | 4.64 |
+| White on the primary gradient, dark end | `#ffffff` | `#3e5b76` | 7.09 |
+| Tinted button text | `#0d4a70` | `#e4ecf4` | 7.89 |
 | Delete button text | `#9c2f37` | `#fbe9ea` | 6.24 |
 | Header text on the blue end of the wash | `#1c2833` | `#e6f3fb` | 13.26 |
 | Header text on the pearl middle | `#1c2833` | `#f2f7fb` | 13.90 |
@@ -40,7 +41,7 @@ identify it (field borders) and for focus indicators.
 | Field border on a panel (control) | `#7f8c99` | `#ffffff` | 3.43 |
 | Field border on the page (control) | `#7f8c99` | `#f4f6f8` | 3.17 |
 | Header field border on the pearl middle (control) | `#75828f` | `#f2f7fb` | 3.64 |
-| Focus ring on a panel | `#2478b8` | `#ffffff` | 4.72 |
+| Focus ring on a panel | `#4c78a4` | `#ffffff` | 4.64 |
 
 ## Dark
 
@@ -50,12 +51,14 @@ identify it (field borders) and for focus indicators.
 | Body text on a panel | `#e2e8ed` | `#182027` | 13.34 |
 | Secondary text on a panel | `#9aa7b3` | `#182027` | 6.71 |
 | Secondary text on a sunken panel or stripe | `#9aa7b3` | `#1c252d` | 6.33 |
-| Link on a panel | `#75b4e2` | `#182027` | 7.36 |
-| Link on a hovered row | `#75b4e2` | `#1b2d40` | 6.27 |
-| White on the primary | `#ffffff` | `#19659f` | 6.17 |
-| Tinted button text | `#bfdcf3` | `#1a3550` | 8.84 |
+| Link on a panel | `#89acce` | `#182027` | 6.95 |
+| Link on the page | `#89acce` | `#11171c` | 7.61 |
+| Link on a hovered row | `#89acce` | `#222c39` | 5.95 |
+| White on the primary gradient, light end | `#ffffff` | `#4c78a4` | 4.64 |
+| White on the primary gradient, dark end | `#ffffff` | `#3e5b76` | 7.09 |
+| Tinted button text | `#c9d9e9` | `#243346` | 8.91 |
 | Delete button text | `#f2a7ae` | `#35202a` | 7.84 |
-| Header links on the blue end of the wash | `#c9d3db` | `#12263a` | 10.13 |
+| Header links on the blue end of the wash | `#c9d3db` | `#192433` | 10.31 |
 | Header links on the slate middle | `#c9d3db` | `#182231` | 10.54 |
 | Status chip New | `#8ab0cf` | `#1b2e3e` | 6.10 |
 | Status chip In Progress | `#9ea7d8` | `#222b41` | 6.02 |
@@ -67,7 +70,7 @@ identify it (field borders) and for focus indicators.
 | Field border on a panel (control) | `#6b7a86` | `#182027` | 3.73 |
 | Field border on the page (control) | `#6b7a86` | `#11171c` | 4.09 |
 | Header field border on the slate middle (control) | `#6b7a86` | `#182231` | 3.62 |
-| Focus ring on a panel | `#75b4e2` | `#182027` | 7.36 |
+| Focus ring on a panel | `#89acce` | `#182027` | 6.95 |
 
 ## Not covered
 
