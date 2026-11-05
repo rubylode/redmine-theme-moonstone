@@ -2,12 +2,13 @@
 
 All notable changes to this theme. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
-## [Unreleased]
+## [2.1.0] - 2026-11-05
 
 ### Changed
 
 - The accent is the steel blue of Redmine's own classic look instead of sky blue, in light and dark: links, buttons, tabs, focus rings and the
   header hover. The pale header, the page and the panels stay as they were.
+- The workflows use the current versions of the GitHub actions, and Dependabot sends one grouped update a month instead of one pull request per action.
 
 ## [2.0.0] - 2026-11-04
 
